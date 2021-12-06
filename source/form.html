@@ -39,21 +39,21 @@
             <legend class="visually-hidden">О питомце</legend>
             <ul class="questionnaire__list">
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <span class="questionnaire__label">Имя:*</span>
-                  <input class="questionnaire__input" type="text" name="pet-name" value="Барсик" required>
+                <label class="questionnaire__control input">
+                  <span class="input__label">Имя:*</span>
+                  <input class="input__entry" type="text" name="pet-name" placeholder="Барсик" required>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <span class="questionnaire__label">Вес (кг):*</span>
-                  <input class="questionnaire__input" type="number" name="pet-weight" value="7" required>
+                <label class="questionnaire__control input">
+                  <span class="input__label">Вес (кг):*</span>
+                  <input class="input__entry" type="number" name="pet-weight" placeholder="7" required>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <span class="questionnaire__label">Возраст (лет):</span>
-                  <input class="questionnaire__input" type="number" name="pet-age" value="7">
+                <label class="questionnaire__control input">
+                  <span class="input__label">Возраст (лет):</span>
+                  <input class="input__entry" type="number" name="pet-age" placeholder="7">
                 </label>
               </li>
             </ul>
@@ -62,24 +62,24 @@
             <legend class="visually-hidden">Подбор программы питания</legend>
             <ul class="questionnaire__list">
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <input class="questionnaire__input-radio visually-hidden" type="radio" name="type-of-diet" value="slim" checked>
-                  <span class="questionnaire__mark-radio"></span>
-                  <span class="questionnaire__label">Похудение</span>
+                <label class="questionnaire__control choice choice--radio">
+                  <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="slim" checked>
+                  <span class="choice__mark"></span>
+                  <span class="choice__label">Похудение</span>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <input class="questionnaire__input-radio visually-hidden" type="radio" name="type-of-diet" value="pro">
-                  <span class="questionnaire__mark-radio"></span>
-                  <span class="questionnaire__label">Набор массы</span>
+                <label class="questionnaire__control choice choice--radio">
+                  <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="pro">
+                  <span class="choice__mark"></span>
+                  <span class="choice__label">Набор массы</span>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <input class="questionnaire__input-radio visually-hidden" type="radio" name="type-of-diet" value="help-with-selection">
-                  <span class="questionnaire__mark-radio"></span>
-                  <span class="questionnaire__label">Не знаю (Нужен ваш совет)</span>
+                <label class="questionnaire__control choice choice--radio">
+                  <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="help-with-selection">
+                  <span class="choice__mark"></span>
+                  <span class="choice__label">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -88,64 +88,64 @@
             <legend class="questionnaire__legend">Контактные данные (владельца кота)</legend>
             <ul class="questionnaire__list">
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <span class="questionnaire__label">E-mail:*</span>
-                  <input class="questionnaire__input" type="email" name="email" value="kuklachev@gmail.com" required>
+                <label class="questionnaire__control input input--email">
+                  <span class="input__label">E-mail:*</span>
+                  <input class="input__entry" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <span class="questionnaire__label">Телефон:*</span>
-                  <input class="questionnaire__input" type="tel" name="tel-number" value="8 (960) 900-60-90" required>
+                <label class="questionnaire__control input input--phone">
+                  <span class="input__label">Телефон:*</span>
+                  <input class="input__entry" type="tel" name="tel-number" placeholder="8 (960) 900-60-90" required>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
             <legend class="questionnaire__legend">Комментарий</legend>
-            <textarea class="questionnaire__input-text" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="questionnaire__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
             <legend class="questionnaire__legend">Дополнительно</legend>
             <ul class="questionnaire__list">
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <input class="questionnaire__input-checkbox visually-hidden" type="checkbox" name="sweetener" checked>
-                  <span class="questionnaire__mark-checkbox"></span>
-                  <span class="questionnaire__label">Cахарозаменитель</span>
+                <label class="questionnaire__control choice">
+                  <input class="choice__entry visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="choice__mark"></span>
+                  <span class="choice__label">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <input class="questionnaire__input-checkbox visually-hidden" type="checkbox" name="water">
-                  <span class="questionnaire__mark-checkbox"></span>
-                  <span class="questionnaire__label">Питьевая вода</span>
+                <label class="questionnaire__control choice">
+                  <input class="choice__entry visually-hidden" type="checkbox" name="water">
+                  <span class="choice__mark"></span>
+                  <span class="choice__label">Питьевая вода</span>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <input class="questionnaire__input-checkbox visually-hidden" type="checkbox" name="milk">
-                  <span class="questionnaire__mark-checkbox"></span>
-                  <span class="questionnaire__label">Молоко</span>
+                <label class="questionnaire__control choice">
+                  <input class="choice__entry visually-hidden" type="checkbox" name="milk">
+                  <span class="choice__mark"></span>
+                  <span class="choice__label">Молоко</span>
                 </label>
               </li>
               <li class="questionnaire__item">
-                <label class="questionnaire__control">
-                  <input class="questionnaire__input-checkbox visually-hidden" type="checkbox" name="vitamins">
-                  <span class="questionnaire__mark-checkbox"></span>
-                  <span class="questionnaire__label">Витамины</span>
+                <label class="questionnaire__control choice">
+                  <input class="choice__entry visually-hidden" type="checkbox" name="vitamins">
+                  <span class="choice__mark"></span>
+                  <span class="choice__label">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <button class="questionnaire__button" type="submit">Отправить заявку</button>
+          <p class="questionnaire__explanation">* — Обязательные поля</p>
         </form>
-        <p class="questionnaire__explanation">* — Обязательные поля</p>
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__contacts">
+      <section class="page-footer__contacts contacts">
         <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
         <address class="contacts__address">
           ул. Большая
