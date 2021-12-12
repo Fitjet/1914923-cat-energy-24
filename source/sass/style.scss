@@ -1,1 +1,36 @@
-// Начните писать стили здесь
+// Globals
+@import "./global/global.scss";
+@import "./global/button.scss";
+@import "./global/wrapper.scss";
+
+// components
+@import "./components/page-header.scss";
+@import "./components/main-nav.scss";
+@import "./components/site-list.scss";
+@import "./components/page-main.scss";
+@import "./components/main-promo.scss";
+@import "./components/watchwords.scss";
+@import "./components/nutrition-menu.scss";
+@import "./components/nutrition-card.scss";
+@import "./components/main-info.scss";
+@import "./components/nutrition-features.scss";
+@import "./components/living-proof.scss";
+@import "./components/stats.scss";
+@import "./components/expenses.scss";
+@import "./components/changes.scss";
+@import "./components/slider.scss";
+@import "./components/page-catalog.scss";
+@import "./components/main-products.scss";
+@import "./components/product-card.scss";
+@import "./components/product-more.scss";
+@import "./components/another-products.scss";
+@import "./components/another-product-card.scss";
+@import "./components/gift.scss";
+@import "./components/page-form.scss";
+@import "./components/questionnaire.scss";
+@import "./components/input.scss";
+@import "./components/choice.scss";
+@import "./components/page-footer.scss";
+@import "./components/contacts.scss";
+@import "./components/social.scss";
+@import "./components/developer.scss";

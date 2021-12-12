@@ -2,10 +2,11 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header wrapper">
       <a class="page-header__logo">
         <img class="page-header__logo-img" src="img/logo_mobile.svg" width="34" height="38" alt="Перейти на главную">
         <img class="page-header__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
@@ -14,7 +15,7 @@
         <button class="main-nav__button button"  type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list clear-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
@@ -29,15 +30,15 @@
     </header>
 
     <main class="page-form">
-      <h1 class="page-form__title">Подбор программы</h1>
+      <h1 class="page-form__title wrapper">Подбор программы</h1>
       <section class="page-form__questionnaire questionnaire">
-        <h2 class="visually-hidden">
+        <h2 class="questionnaire__title wrapper">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </h2>
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset class="questionnaire__fieldset">
             <legend class="visually-hidden">О питомце</legend>
-            <ul class="questionnaire__list">
+            <ul class="questionnaire__list clear-list wrapper">
               <li class="questionnaire__item">
                 <label class="questionnaire__control input">
                   <span class="input__label">Имя:*</span>
@@ -60,7 +61,7 @@
           </fieldset>
           <fieldset class="questionnaire__fieldset">
             <legend class="visually-hidden">Подбор программы питания</legend>
-            <ul class="questionnaire__list">
+            <ul class="questionnaire__list clear-list wrapper">
               <li class="questionnaire__item">
                 <label class="questionnaire__control choice choice--radio">
                   <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="slim" checked>
@@ -85,8 +86,8 @@
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
-            <legend class="questionnaire__legend">Контактные данные (владельца кота)</legend>
-            <ul class="questionnaire__list">
+            <legend class="questionnaire__legend wrapper">Контактные данные (владельца кота)</legend>
+            <ul class="questionnaire__list clear-list wrapper">
               <li class="questionnaire__item">
                 <label class="questionnaire__control input input--email">
                   <span class="input__label">E-mail:*</span>
@@ -102,12 +103,14 @@
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
-            <legend class="questionnaire__legend">Комментарий</legend>
-            <textarea class="questionnaire__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <legend class="questionnaire__legend wrapper">Комментарий</legend>
+            <div class="wrapper">
+              <textarea class="questionnaire__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
-            <legend class="questionnaire__legend">Дополнительно</legend>
-            <ul class="questionnaire__list">
+            <legend class="questionnaire__legend wrapper">Дополнительно</legend>
+            <ul class="questionnaire__list clear-list wrapper">
               <li class="questionnaire__item">
                 <label class="questionnaire__control choice">
                   <input class="choice__entry visually-hidden" type="checkbox" name="sweetener" checked>
@@ -138,55 +141,61 @@
               </li>
             </ul>
           </fieldset>
-          <button class="questionnaire__button" type="submit">Отправить заявку</button>
-          <p class="questionnaire__explanation">* — Обязательные поля</p>
+          <div class="wrapper">
+            <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+            <p class="questionnaire__explanation">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="contacts__address">
-          ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург
-        </address>
-        <div class="contacts__map"></div>
+        <div class="wrapper">
+          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="contacts__address">
+            ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург
+          </address>
+        </div>
+        <img class="contacts__map" src="./img/map.jpg" alt="Мы на карте.">
       </section>
-      <section class="page-footer__logo">
-        <a href="#">
-          <h2 class="visually-hidden">Перейти на главную</h2>
-          <img class="page-footer__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
-        </a>
-      </section>
-      <section class="page-footer__social social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">ВКонтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Инстаграмм</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="page-footer__developer developer">
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <h2 class="developer__title">HTML Academy</h2>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
-          <span class="visually-hidden">Перейти на сайт: "HTML и CSS. Адаптивная вёрстка и автоматизация"</span>
-        </a>
-      </section>
+      <div class="wrapper">
+        <section class="page-footer__logo">
+          <a href="#">
+            <h2 class="visually-hidden">Перейти на главную</h2>
+            <img class="page-footer__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
+          </a>
+        </section>
+        <section class="page-footer__social social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social__list clear-list">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Инстаграмм</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="page-footer__developer developer">
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <h2 class="developer__title">HTML Academy</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+            <span class="visually-hidden">Перейти на сайт: "HTML и CSS. Адаптивная вёрстка и автоматизация"</span>
+          </a>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
