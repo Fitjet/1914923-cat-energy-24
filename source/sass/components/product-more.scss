@@ -1,14 +1,9 @@
-
 .product-more__title {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  @include o-r-s16-h20;
   text-transform: uppercase;
-  color: #111111;
+  color: $grey-6;
 }
 
 .product-more__desc {
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 16px;
+  @include a-r-s12-h16;
 }

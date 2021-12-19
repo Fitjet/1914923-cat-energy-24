@@ -1,13 +1,10 @@
-
 .living-proof {
-  background-color: #eaeaea;
+  background-color: $grey-2;
 }
 
 .living-proof__title {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 40px;
-  color: #000000;
+  @include o-r-s36-h40;
+  color: $black;
 }
 
 .living-proof__desc {

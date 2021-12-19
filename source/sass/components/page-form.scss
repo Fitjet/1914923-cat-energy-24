@@ -1,7 +1,4 @@
-
 .page-form__title {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  color: #000000;
+  @include o-r-s36-h36;
+  color: $black;
 }

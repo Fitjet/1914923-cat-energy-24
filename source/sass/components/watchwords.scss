@@ -1,15 +1,12 @@
-
 .watchwords {
-  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/index-background.jpg");
+  background-image: url("../img/index-background.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-size: cover;
 }
 
 .watchwords__title {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 36px;
+  @include o-r-s36-h36;
 }
 
 .watchwords__slogan {

@@ -1,9 +1,7 @@
-
 .input {
-  font-size: 16px;
-  line-height: 18px;
+  @include o-r-s16-h18;
   text-transform: uppercase;
-  color: #444444;
+  color: $grey-6;
 }
 
 .input__entry {

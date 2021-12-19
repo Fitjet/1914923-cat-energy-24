@@ -1,9 +1,6 @@
-
 .site-list__link {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
+  @include o-m-s20-h20;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000000;
+  color: $black;
 }

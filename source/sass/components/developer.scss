@@ -1,12 +1,8 @@
-
 .developer__link {
   text-decoration: none;
 }
 
 .developer__title {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #444444;
+  @include a-r-s16-h18;
+  color: $grey-6;
 }

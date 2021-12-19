@@ -1,5 +1,13 @@
+// DS
+@import "./ds-system/ds-styles.scss";
+
+// mixins
+@import "./mixins/mixins.scss";
+
 // Globals
 @import "./global/global.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/page.scss";
 @import "./global/button.scss";
 @import "./global/wrapper.scss";
 

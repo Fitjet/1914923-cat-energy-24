@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -31,10 +31,10 @@
 
     <main class="page-catalog">
       <h1 class="page-catalog__title wrapper">Католог продукции</h1>
-      <section class="page-catalog__products main-products">
+      <section class="page-catalog__products main-products wrapper">
         <h2 class="visually-hidden">Основная продукция</h2>
         <ul class="main-products__list clear-list">
-          <li class="main-products__item product-card wrapper">
+          <li class="main-products__item product-card">
             <img class="product-card__image" src="img/pro-chicken-500.png" alt="Cat Energy pro со вкусом курицы, 500 грамм">
             <h3 class="product-card__title">Cat Energy pro 500 г</h3>
             <ul class="product-card__list clear-list">
@@ -53,7 +53,7 @@
             </ul>
             <a class="product-card__button button" href="#">Заказать</a>
           </li>
-          <li class="main-products__item product-card wrapper">
+          <li class="main-products__item product-card">
             <img class="product-card__image" src="img/pro-chicken-1000.png" alt="Cat Energy pro со вкусом курицы, 1000 грамм">
             <h3 class="product-card__title">Cat Energy pro 1000 г</h3>
             <ul class="product-card__list clear-list">
@@ -72,7 +72,7 @@
             </ul>
             <a class="product-card__button button" href="#">Заказать</a>
           </li>
-          <li class="main-products__item product-card wrapper">
+          <li class="main-products__item product-card">
             <img class="product-card__image" src="img/pro-fish-500.png" alt="Cat Energy pro со вкусом рыбы, 500 грамм">
             <h3 class="product-card__title">Cat Energy pro 500 г</h3>
             <ul class="product-card__list clear-list">
@@ -91,7 +91,7 @@
             </ul>
             <a class="product-card__button button" href="#">Заказать</a>
           </li>
-          <li class="main-products__item product-card wrapper">
+          <li class="main-products__item product-card">
             <img class="product-card__image" src="img/pro-fish-1000.png" alt="Cat Energy pro со вкусом рыбы, 1000 грамм">
             <h3 class="product-card__title">Cat Energy pro 1000 г</h3>
             <ul class="product-card__list clear-list">
@@ -110,7 +110,7 @@
             </ul>
             <a class="product-card__button button" href="#">Заказать</a>
           </li>
-          <li class="main-products__item product-card wrapper">
+          <li class="main-products__item product-card">
             <img class="product-card__image" src="img/slim-buckwheat-500.png" alt="Cat Energy slim со вкусом гречки, 500 грамм">
             <h3 class="product-card__title">Cat Energy slim 500 г</h3>
             <ul class="product-card__list clear-list">
@@ -129,7 +129,7 @@
             </ul>
             <a class="product-card__button button" href="#">Заказать</a>
           </li>
-          <li class="main-products__item product-card wrapper">
+          <li class="main-products__item product-card">
             <img class="product-card__image" src="img/slim-buckwheat-1000.png" alt="Cat Energy slim со вкусом гречки, 1000 грамм">
             <h3 class="product-card__title">Cat Energy slim 1000 г</h3>
             <ul class="product-card__list clear-list">
@@ -148,7 +148,7 @@
             </ul>
             <a class="product-card__button button" href="#">Заказать</a>
           </li>
-          <li class="main-products__item product-card wrapper">
+          <li class="main-products__item product-card">
             <img class="product-card__image" src="img/slim-rice-500.png" alt="Cat Energy slim со вкусом риса, 500 грамм">
             <h3 class="product-card__title">Cat Energy slim 500 г</h3>
             <ul class="product-card__list clear-list">
@@ -167,16 +167,16 @@
             </ul>
             <a class="product-card__button button" href="#">Заказать</a>
           </li>
-          <li class="main-products__item product-more wrapper">
+          <li class="main-products__item product-more">
             <h3 class="product-more__title">Показать еще 100500 товаров</h3>
             <p class="product-more__desc">На самом деле вкусов гораздо больше!</p>
             <a class="product-more__button button button--silver" href="#">Показать все</a>
           </li>
         </ul>
       </section>
-      <section class="page-catalog__another-products another-products">
-        <h2 class="another-products__title wrapper">Дополнительные товары</h2>
-        <ul class="another-products__list another-product-card clear-list wrapper">
+      <section class="page-catalog__another-products another-products wrapper">
+        <h2 class="another-products__title">Дополнительные товары</h2>
+        <ul class="another-products__list another-product-card clear-list">
           <li>
             <h3 class="another-product-card__title">Сахарозаменитель</h3>
             <p class="another-product-card__quantity">1 упаковка (100 г)</p>
@@ -202,14 +202,12 @@
             <a class="another-product-card__button button" href="#">Заказать</a>
           </li>
         </ul>
-        <div class="wrapper">
-          <div class="another-products__gift gift">
-            <p class="gift__desc">
-              Закажите все
-              и получите чехол для
-              кота в подарок!
-            </p>
-          </div>
+        <div class="another-products__gift gift">
+          <p class="gift__desc">
+            Закажите все
+            и получите чехол для
+            кота в подарок!
+          </p>
         </div>
       </section>
     </main>
@@ -224,7 +222,7 @@
             Санкт-Петербург
           </address>
         </div>
-        <img class="contacts__map" src="./img/map.jpg" alt="Мы на карте.">
+        <img class="contacts__map" src="img/map.jpg" alt="Мы на карте.">
       </section>
       <div class="wrapper">
         <section class="page-footer__logo">

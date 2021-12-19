@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -29,16 +29,16 @@
       </nav>
     </header>
 
-    <main class="page-form">
-      <h1 class="page-form__title wrapper">Подбор программы</h1>
+    <main class="page-form wrapper">
+      <h1 class="page-form__title">Подбор программы</h1>
       <section class="page-form__questionnaire questionnaire">
-        <h2 class="questionnaire__title wrapper">
+        <h2 class="questionnaire__title">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </h2>
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset class="questionnaire__fieldset">
             <legend class="visually-hidden">О питомце</legend>
-            <ul class="questionnaire__list clear-list wrapper">
+            <ul class="questionnaire__list clear-list ">
               <li class="questionnaire__item">
                 <label class="questionnaire__control input">
                   <span class="input__label">Имя:*</span>
@@ -61,7 +61,7 @@
           </fieldset>
           <fieldset class="questionnaire__fieldset">
             <legend class="visually-hidden">Подбор программы питания</legend>
-            <ul class="questionnaire__list clear-list wrapper">
+            <ul class="questionnaire__list clear-list">
               <li class="questionnaire__item">
                 <label class="questionnaire__control choice choice--radio">
                   <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="slim" checked>
@@ -86,8 +86,8 @@
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
-            <legend class="questionnaire__legend wrapper">Контактные данные (владельца кота)</legend>
-            <ul class="questionnaire__list clear-list wrapper">
+            <legend class="questionnaire__legend">Контактные данные (владельца кота)</legend>
+            <ul class="questionnaire__list clear-list">
               <li class="questionnaire__item">
                 <label class="questionnaire__control input input--email">
                   <span class="input__label">E-mail:*</span>
@@ -103,14 +103,12 @@
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
-            <legend class="questionnaire__legend wrapper">Комментарий</legend>
-            <div class="wrapper">
-              <textarea class="questionnaire__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
+            <legend class="questionnaire__legend">Комментарий</legend>
+            <textarea class="questionnaire__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="questionnaire__fieldset">
-            <legend class="questionnaire__legend wrapper">Дополнительно</legend>
-            <ul class="questionnaire__list clear-list wrapper">
+            <legend class="questionnaire__legend">Дополнительно</legend>
+            <ul class="questionnaire__list clear-list">
               <li class="questionnaire__item">
                 <label class="questionnaire__control choice">
                   <input class="choice__entry visually-hidden" type="checkbox" name="sweetener" checked>
@@ -141,10 +139,8 @@
               </li>
             </ul>
           </fieldset>
-          <div class="wrapper">
-            <button class="questionnaire__button button" type="submit">Отправить заявку</button>
-            <p class="questionnaire__explanation">* — Обязательные поля</p>
-          </div>
+          <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+          <p class="questionnaire__explanation">* — Обязательные поля</p>
         </form>
       </section>
     </main>
@@ -159,7 +155,7 @@
             Санкт-Петербург
           </address>
         </div>
-        <img class="contacts__map" src="./img/map.jpg" alt="Мы на карте.">
+        <img class="contacts__map" src="img/map.jpg" alt="Мы на карте.">
       </section>
       <div class="wrapper">
         <section class="page-footer__logo">
