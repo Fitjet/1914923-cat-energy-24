@@ -1,21 +1,6 @@
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
-  font-display: swap;
-}
-
-.clear-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+@import "./fonts.scss";
+@import "./clear-list.scss";
+@import "./visually-hidden.scss";
+@import "./page.scss";
+@import "./wrapper.scss";
+@import "./button.scss";
