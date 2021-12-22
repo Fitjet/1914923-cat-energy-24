@@ -1,0 +1,26 @@
+.questionnaire__title {
+  @include o-r-s14-h18;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.questionnaire__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.questionnaire__legend {
+  @include o-r-s24-h26;
+  color: $black;
+}
+
+.questionnaire__comment {
+  @include o-r-s16-h18;
+  text-transform: uppercase;
+  color: $grey-6;
+}
+
+.questionnaire__explanation {
+  @include a-r-s14-h16;
+}

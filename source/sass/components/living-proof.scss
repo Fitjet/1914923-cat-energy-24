@@ -1,0 +1,12 @@
+.living-proof {
+  background-color: $grey-2;
+}
+
+.living-proof__title {
+  @include o-r-s36-h40;
+  color: $black;
+}
+
+.living-proof__desc {
+  font-family: "Arial", sans-serif;
+}

@@ -1,0 +1,7 @@
+.slider__button {
+  @include o-r-s16-h20;
+  text-transform: uppercase;
+  color: $black;
+  background: none;
+  border: none;
+}

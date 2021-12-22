@@ -1,0 +1,17 @@
+.stats__group {
+  border: 1px solid $grey-5;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.stats__desc {
+  @include o-r-s12-h12;
+  text-align: center;
+}
+
+.stats__number {
+  @include o-r-s24-h24;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+}

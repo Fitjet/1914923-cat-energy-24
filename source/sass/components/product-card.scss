@@ -1,0 +1,14 @@
+.product-card__title {
+  @include o-r-s16-h20;
+  text-transform: uppercase;
+  color: $grey-5;
+}
+
+.product-card__item {
+  @include a-r-s12-h16;
+  color: $grey-6;
+}
+
+.product-card__property-value {
+  font-weight: 400;
+}

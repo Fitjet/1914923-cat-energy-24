@@ -1,0 +1,9 @@
+.choice {
+  @include o-r-s16-h18;
+  text-transform: uppercase;
+  color: $black;
+
+  &--radio {
+    color: $grey-5;
+  }
+}

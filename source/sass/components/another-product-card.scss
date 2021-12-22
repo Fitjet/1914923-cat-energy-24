@@ -1,0 +1,13 @@
+.another-product-card {
+  @include a-r-s14-h14;
+}
+
+.another-product-card__title {
+  @include o-r-s16-h16;
+  text-transform: uppercase;
+  color: $grey-5;
+}
+
+.another-product-card__prise {
+  font-weight: 400;
+}

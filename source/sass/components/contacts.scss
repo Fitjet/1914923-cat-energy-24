@@ -1,0 +1,18 @@
+.contacts {
+  background-color: $white;
+}
+
+.contacts__title {
+  @include o-r-s16-h20;
+  text-transform: uppercase;
+  color: $grey-6;
+}
+
+.contacts__address {
+  @include a-r-s14-h20;
+  color: $grey-6;
+}
+
+.contacts__map {
+  width: 100%;
+}

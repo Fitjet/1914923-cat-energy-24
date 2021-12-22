@@ -1,0 +1,10 @@
+.input {
+  @include o-r-s16-h18;
+  text-transform: uppercase;
+  color: $grey-6;
+}
+
+.input__entry {
+  font: inherit;
+  text-transform: uppercase;
+}

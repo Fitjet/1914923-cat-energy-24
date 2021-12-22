@@ -1,0 +1,20 @@
+.nutrition-card {
+  background-color: $grey-1;
+}
+
+.nutrition-card__title {
+  @include o-r-s24-h37;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.nutrition-card__desc {
+  font-family: "Arial", sans-serif;
+}
+
+.nutrition-card__link {
+  @include o-r-s16-h16;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+}

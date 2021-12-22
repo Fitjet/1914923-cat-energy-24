@@ -1,0 +1,20 @@
+.button {
+  @include o-r-s16-h20;
+  background-color: $apple;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  border: none;
+  margin: 0;
+
+  &--main {
+    @include o-r-s14-h18;
+  }
+
+  &--silver {
+    background-color: $grey-1;
+    color: $grey-6;
+  }
+}

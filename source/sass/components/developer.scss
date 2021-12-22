@@ -1,0 +1,8 @@
+.developer__link {
+  text-decoration: none;
+}
+
+.developer__title {
+  @include a-r-s16-h18;
+  color: $grey-6;
+}

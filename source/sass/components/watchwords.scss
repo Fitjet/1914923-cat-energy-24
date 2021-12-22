@@ -1,0 +1,15 @@
+.watchwords {
+  background-image: url("../img/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.watchwords__title {
+  @include o-r-s36-h36;
+}
+
+.watchwords__slogan {
+  line-height: 14px;
+  text-transform: uppercase;
+}
