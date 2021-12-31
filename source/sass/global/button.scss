@@ -1,6 +1,6 @@
 .button {
   @include o-r-s16-h20;
-  background-color: $apple;
+  background-color: $green-1;
   display: block;
   text-align: center;
   text-transform: uppercase;
@@ -11,6 +11,10 @@
 
   &--main {
     @include o-r-s14-h18;
+
+    @include s768 {
+      width: 244px;
+    }
   }
 
   &--silver {

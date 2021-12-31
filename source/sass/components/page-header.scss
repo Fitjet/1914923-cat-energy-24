@@ -1,1 +1,25 @@
-.page-header {}
+.page-header {
+  height: 65px;
+
+  @include s768 {
+    display: flex;
+  }
+
+  @include s1300 {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.page-header__main-nav {
+  @include s768 {
+    margin-left: auto;
+  }
+}
+
+.page-header__button {
+  @include s768 {
+    display: none;
+  }
+}

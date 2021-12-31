@@ -5,6 +5,11 @@
   line-height: $line-height;
 }
 
+@mixin a-r-s12-h12 {
+  @include typography_template(12px, 12px);
+  font-family: "Arial", sans-serif;
+}
+
 @mixin a-r-s12-h16 {
   @include typography_template(12px, 16px);
   font-family: "Arial", sans-serif;

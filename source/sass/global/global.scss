@@ -4,3 +4,8 @@
 @import "./page.scss";
 @import "./wrapper.scss";
 @import "./button.scss";
+
+img {
+  max-width: 100%;
+  height: auto;
+}

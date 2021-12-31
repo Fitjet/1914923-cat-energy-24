@@ -1,1 +1,12 @@
-.nutrition-menu {}
+.nutrition-menu__list {
+  @include s1300 {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nutrition-menu__item {
+  @include s1300 {
+    width: 47%;
+  }
+}

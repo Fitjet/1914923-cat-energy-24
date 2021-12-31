@@ -1,3 +1,46 @@
+
+.main-info__list {
+  @include s768 {
+    display: grid;
+    grid-template-columns: 250px 134px 250px 74px;
+    grid-template-rows: 280px 37px 280px;
+  }
+
+  @include s1300 {
+    display: grid;
+    grid-template-columns: repeat(4, 20.5%);
+    grid-template-rows: 280px;
+    gap: 6%;
+  }
+}
+
+.main-info__item {
+  @include s768 {
+    &--icon-leaf {
+      grid-column: 1/2;
+    }
+
+    &--icon-tub {
+      grid-column: 3/4;
+    }
+
+    &--icon-eat {
+      grid-column: 1/2;
+      grid-row: 3/-1;
+    }
+
+    &--icon-alarm {
+      grid-column: 3/4;
+      grid-row: 3/-1;
+    }
+  }
+
+  @include s1300 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
 .main-info__title {
   @include o-r-s36-h40;
   color: $black;

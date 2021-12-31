@@ -1,4 +1,36 @@
 .main-promo {
+  padding: 25px;
   color: $white;
   text-align: center;
+  background-image: url("../img/index-background.jpg"), linear-gradient(to bottom, $green-2 302px, $white 302px);
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @include s768 {
+    color: $black;
+    text-align: left;
+    background: none;
+  }
+
+  @include s1300 {
+    background-image: url("../img/changed-background.jpg"), linear-gradient(to right, $white 50%, $green-2 50%);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+  }
+}
+
+.main-promo__watchwords {
+  @include s768 {
+    height: 580px;
+    padding: 0 87px;
+    box-sizing: border-box;
+  }
+
+  @include s1300 {
+    height: 350px;
+    padding: 0 80px;
+    margin-top: 165px;
+    margin-bottom: 50px;
+  }
 }

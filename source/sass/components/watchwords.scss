@@ -1,15 +1,30 @@
 .watchwords {
-  background-image: url("../img/index-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
 }
 
 .watchwords__title {
   @include o-r-s36-h36;
+  width: 315px;
 }
 
 .watchwords__slogan {
   line-height: 14px;
   text-transform: uppercase;
+}
+
+.watchwords__nutrition-img {
+  @include s768 {
+    position: absolute;
+    right: 45px;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  @include s1300 {
+    width: 522px;
+    top: -82px;
+    right: 250px;
+    bottom: 0;
+    z-index: 1;
+  }
 }

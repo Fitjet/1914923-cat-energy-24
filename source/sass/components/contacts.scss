@@ -1,18 +1,61 @@
 .contacts {
+  position: relative;
+}
+
+.contacts__data {
   background-color: $white;
+
+  @include s1300 {
+    width: 565px;
+    position: absolute;
+    top: 150px;
+    left: 5%;
+  }
+}
+
+.contacts__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include s768 {
+    padding: 0 70px;
+    width: 628px;
+  }
+
+  @include s1300 {
+    padding: 0 50px;
+    width: 465px;
+  }
 }
 
 .contacts__title {
   @include o-r-s16-h20;
   text-transform: uppercase;
   color: $grey-6;
+
+  @include s768 {
+    width: 160px;
+  }
 }
 
 .contacts__address {
   @include a-r-s14-h20;
   color: $grey-6;
+
+  @include s768 {
+    width: 160px;
+    text-align: right;
+  }
+
+  @include s1300 {
+    text-align: left;
+  }
 }
 
 .contacts__map {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }

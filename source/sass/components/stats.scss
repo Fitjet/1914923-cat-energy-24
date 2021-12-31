@@ -1,17 +1,39 @@
-.stats__group {
+.stats__number {
+  @include o-r-s24-h24;
   border: 1px solid $grey-5;
   box-sizing: border-box;
   border-radius: 3px;
-}
-
-.stats__desc {
-  @include o-r-s12-h12;
-  text-align: center;
-}
-
-.stats__number {
-  @include o-r-s24-h24;
   text-align: center;
   text-transform: uppercase;
   color: $black;
+  position: relative;
+  padding-top: 13px;
+  width: 124px;
+  height: 56px;
+
+  @include s768 {
+    padding-top: 20px;
+    width: 162px;
+    height: 72px;
+  }
+}
+
+.stats__desc {
+  @include a-r-s12-h12;
+  text-align: center;
+  text-transform: none;
+  position: absolute;
+  background-color: $grey-2;
+  top: 44px;
+  right: 20px;
+  left: 21px;
+
+  @include s768 {
+    background-color: $white;
+    top: 63px;
+  }
+
+  @include s1300 {
+    background-color: $grey-2;
+  }
 }

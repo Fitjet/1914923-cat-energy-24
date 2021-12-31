@@ -1,6 +1,20 @@
+.site-list__item {
+  @include s768 {
+    margin-left: 10px;
+  }
+}
+
 .site-list__link {
   @include o-m-s20-h20;
   text-decoration: none;
   text-transform: uppercase;
   color: $black;
+
+  @include s768 {
+    padding: 10px;
+  }
+
+  @include s1300 {
+    color: $white;
+  }
 }

@@ -1,5 +1,25 @@
 .living-proof {
   background-color: $grey-2;
+
+  @include s768 {
+    background-image: linear-gradient(to bottom, $white 70%, $grey-2 70%);
+  }
+
+  @include s1300 {
+    background-image: linear-gradient(to bottom, $white 30%, $grey-2 30%);
+  }
+}
+
+.living-proof__main {
+  @include s1300 {
+    width: 440px;
+  }
+}
+
+.living-proof__changes {
+  @include s1300 {
+    width: 590px;
+  }
 }
 
 .living-proof__title {
@@ -9,4 +29,11 @@
 
 .living-proof__desc {
   font-family: "Arial", sans-serif;
+}
+
+.living-proof__flex {
+  @include s1300 {
+    display: flex;
+    justify-content: space-between;
+  }
 }
