@@ -1,3 +1,23 @@
+.main-info {
+  margin-bottom: 50px;
+}
+
+.main-info__title {
+  @include o-r-s36-h40;
+  color: $black;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  @include s768 {
+    @include o-r-s60-h60;
+    margin-top: 45px;
+    margin-bottom: 72px;
+  }
+
+  @include s1300 {
+    margin-top: 30px;
+  }
+}
 
 .main-info__list {
   @include s768 {
@@ -39,9 +59,4 @@
     grid-column: auto;
     grid-row: auto;
   }
-}
-
-.main-info__title {
-  @include o-r-s36-h40;
-  color: $black;
 }

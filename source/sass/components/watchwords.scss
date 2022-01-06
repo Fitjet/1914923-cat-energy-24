@@ -1,29 +1,42 @@
 .watchwords {
   position: relative;
+  padding-top: 2px;
 }
 
 .watchwords__title {
   @include o-r-s36-h36;
-  width: 315px;
+  margin: 25px 0;
+
+  @include s768 {
+    @include o-r-s60-h60;
+    width: 450px;
+  }
 }
 
 .watchwords__slogan {
   line-height: 14px;
   text-transform: uppercase;
+
+  @include s768 {
+    @include o-r-s20-h20;
+  }
 }
 
 .watchwords__nutrition-img {
+  margin-top: 20px;
+
   @include s768 {
+    height: 610px;
     position: absolute;
-    right: 45px;
+    right: -10px;
     bottom: 0;
     z-index: -1;
   }
 
   @include s1300 {
-    width: 522px;
-    top: -82px;
-    right: 250px;
+    height: 500px;
+    top: -75px;
+    right: 220px;
     bottom: 0;
     z-index: 1;
   }

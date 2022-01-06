@@ -11,10 +11,12 @@
   color: $black;
 
   @include s768 {
+    @include o-r-s18-h24;
     padding: 10px;
   }
 
   @include s1300 {
+    @include o-r-s20-h30;
     color: $white;
   }
 }

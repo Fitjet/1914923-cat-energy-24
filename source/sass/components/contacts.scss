@@ -6,10 +6,9 @@
   background-color: $white;
 
   @include s1300 {
-    width: 565px;
     position: absolute;
-    top: 150px;
-    left: 5%;
+    width: 565px;
+    top: 26%;
   }
 }
 
@@ -17,15 +16,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 13px;
+  padding-bottom: 13px;
 
   @include s768 {
-    padding: 0 70px;
+    padding: 43px 70px 39px;
     width: 628px;
   }
 
   @include s1300 {
-    padding: 0 50px;
-    width: 465px;
+    padding: 43px 80px 39px;
+    width: 405px;
   }
 }
 
@@ -35,6 +36,7 @@
   color: $grey-6;
 
   @include s768 {
+    @include o-r-s20-h26;
     width: 160px;
   }
 }
@@ -44,6 +46,7 @@
   color: $grey-6;
 
   @include s768 {
+    @include a-r-s16-h20;
     width: 160px;
     text-align: right;
   }

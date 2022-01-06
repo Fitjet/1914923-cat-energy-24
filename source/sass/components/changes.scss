@@ -3,5 +3,14 @@
 }
 
 .changes__image {
-  width: 80%;
+  height: 210px;
+  width: auto;
+
+  @include s768 {
+    height: 500px;
+  }
+}
+
+.changes__slider {
+  margin-top: 15px;
 }

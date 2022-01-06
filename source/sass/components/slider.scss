@@ -4,4 +4,8 @@
   color: $black;
   background: none;
   border: none;
+
+  @include s768 {
+    @include o-r-s20-h30;
+  }
 }

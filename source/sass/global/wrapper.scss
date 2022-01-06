@@ -15,9 +15,24 @@
 
   &--map {
     height: 362px;
+    width: auto;
+    margin: auto;
+    padding: 0;
 
     @include s768 {
       height: 400px;
+    }
+  }
+
+  &--coop-data {
+    width: auto;
+    margin: auto;
+    padding: 0;
+
+    @include s1300 {
+      width: 1220px;
+      margin: 0 auto;
+      padding: 0 40px;
     }
   }
 }

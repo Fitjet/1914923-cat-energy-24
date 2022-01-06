@@ -1,3 +1,7 @@
 .nutrition-features__desc {
   font-family: "Arial", sans-serif;
+
+  @include s768 {
+    @include a-r-s16-h24;
+  }
 }

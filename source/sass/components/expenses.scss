@@ -3,9 +3,22 @@
   text-align: center;
   text-transform: uppercase;
   color: $black;
+
+  @include s768 {
+    @include o-r-s20-h20;
+  }
 }
 
 .expenses__title {
-  font-size: 14px;
+  margin: 0;
   font-weight: 400;
+  font-size: 20px;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+.expenses__prise {
+  margin: 0;
 }

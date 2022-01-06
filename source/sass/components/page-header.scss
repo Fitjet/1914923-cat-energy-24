@@ -1,14 +1,14 @@
 .page-header {
-  height: 65px;
+  min-height: 65px;
+  padding-top: 10px;
 
   @include s768 {
     display: flex;
+    padding-top: 24px;
   }
 
   @include s1300 {
-    position: absolute;
-    left: 0;
-    right: 0;
+    padding-top: 53px;
   }
 }
 

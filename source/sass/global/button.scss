@@ -11,9 +11,13 @@
 
   &--main {
     @include o-r-s14-h18;
+    padding: 11px 0;
 
     @include s768 {
+      @include o-r-s20-h20;
       width: 244px;
+      padding: 14px 0;
+      margin-top: 50px;
     }
   }
 
