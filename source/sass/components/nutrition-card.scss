@@ -1,15 +1,28 @@
 .nutrition-card {
   background-color: $grey-1;
+  padding: 16px 20px 20px;
+
+  @include s768 {
+    padding: 40px 52px 55px;
+  }
 }
 
 .nutrition-card__title {
   @include o-r-s24-h37;
   text-transform: uppercase;
   color: $black;
+
+  @include s768 {
+    @include o-r-s36-h36;
+  }
 }
 
 .nutrition-card__desc {
   font-family: "Arial", sans-serif;
+
+  @include s768 {
+    @include a-r-s16-h24;
+  }
 }
 
 .nutrition-card__link {
@@ -17,4 +30,8 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $black;
+
+  @include s768 {
+    @include o-r-s20-h30;
+  }
 }

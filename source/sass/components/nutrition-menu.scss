@@ -1,1 +1,21 @@
-.nutrition-menu {}
+.nutrition-menu__list {
+  @include s1300 {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nutrition-menu__item {
+  margin: 20px 0;
+  box-sizing: border-box;
+
+  @include s768 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @include s1300 {
+    margin: 82px 0 40px;
+    width: 47%;
+  }
+}

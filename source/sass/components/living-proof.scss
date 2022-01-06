@@ -1,12 +1,81 @@
 .living-proof {
   background-color: $grey-2;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @include s768 {
+    background-image: linear-gradient(to bottom, $white 70%, $grey-2 70%);
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  @include s1300 {
+    background-image: linear-gradient(to bottom, $white 30%, $grey-2 30%);
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+}
+
+.living-proof__main {
+  @include s1300 {
+    width: 440px;
+  }
+}
+
+.living-proof__changes {
+  @include s1300 {
+    width: 610px;
+  }
 }
 
 .living-proof__title {
   @include o-r-s36-h40;
   color: $black;
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @include s768 {
+    @include o-r-s60-h60;
+    margin-bottom: 63px;
+  }
+
+  @include s1300 {
+    margin-bottom: 145px;
+  }
 }
 
 .living-proof__desc {
   font-family: "Arial", sans-serif;
+
+  @include s768 {
+    @include a-r-s16-h24;
+  }
+}
+
+.living-proof__stats {
+  margin-top: 20px;
+
+  @include s768 {
+    margin-top: 54px;
+  }
+}
+
+.living-proof__expenses {
+  margin-top: 35px;
+  margin-bottom: 40px;
+
+  @include s768 {
+    margin-top: 54px;
+  }
+
+  @include s1300 {
+    margin-top: 70px;
+  }
+}
+
+.living-proof__flex {
+  @include s1300 {
+    display: flex;
+    justify-content: space-between;
+  }
 }

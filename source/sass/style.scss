@@ -1,16 +1,24 @@
-// DS
-@import "./ds-system/ds-styles.scss";
+// ds-styles
+@import "./ds-system/ds-colors.scss";
+@import "./ds-system/ds-typography.scss";
 
 // mixins
-@import "./mixins/mixins.scss";
+@import "./mixins/m-media.scss";
 
-// Globals
-@import "./global/global.scss";
+// globals
+@import "./global/fonts.scss";
+@import "./global/clear-list.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/page.scss";
+@import "./global/wrapper.scss";
+@import "./global/button.scss";
+@import "./global/tags.scss";
 
 // components
 @import "./components/page-header.scss";
 @import "./components/main-nav.scss";
 @import "./components/site-list.scss";
+@import "./components/modified-header.scss";
 @import "./components/page-main.scss";
 @import "./components/main-promo.scss";
 @import "./components/watchwords.scss";

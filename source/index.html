@@ -2,46 +2,47 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="page-header wrapper">
-      <a class="page-header__logo">
-        <img class="page-header__logo-img" src="img/logo_mobile.svg" width="34" height="38" alt="Перейти на главную">
-        <img class="page-header__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__button button" type="button">
+    <div class="modified-header">
+      <header class="page-header wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-img" src="img/logo_mobile.svg" width="34" height="38" alt="Перейти на главную">
+          <img class="page-header__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
+        </a>
+        <button class="page-header__button button" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list site-list clear-list">
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--current">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="page-main">
-      <h1 class="visually-hidden">Cat Energy – интернет магазин, который поможет подобрать и заказать подходящую систему питания для Вашего кота.</h1>
+        <nav class="page-header__main-nav main-nav main-nav--hidden">
+          <ul class="main-nav__list site-list clear-list">
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--current">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
       <section class="main-promo">
         <div class="main-promo__watchwords watchwords wrapper">
           <h2 class="watchwords__title">Функциональное питание для котов</h2>
           <p class="watchwords__slogan">Занялся собой? Займись котом!</p>
-        </div>
-        <div class="wrapper">
-          <img class="main-promo__nutrition-img nutrition-img" src="img/index-nutrition.png" alt="Питание для котов в яркой оранжевой упаковке: 'Cat energy pro' со вкусом курицы.">
-          <a class="main-promo__button button button--main" href="#">Подобрать программу</a>
+          <img class="watchwords__nutrition-img" src="img/index-nutrition.png" alt="Питание для котов в яркой оранжевой упаковке: 'Cat energy pro' со вкусом курицы.">
+          <a class="watchwords__button button button--main" href="#">Подобрать программу</a>
         </div>
       </section>
+    </div>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Cat Energy – интернет магазин, который поможет подобрать и заказать подходящую систему питания для Вашего кота.</h1>
 
       <section class="nutrition-menu wrapper">
         <h2 class="visually-hidden">Варианты диет для Вашего кота</h2>
@@ -97,41 +98,43 @@
         </ul>
       </section>
 
-      <section class="living-proof wrapper">
-        <h2 class="living-proof__title">Живой пример</h2>
-        <p class="living-proof__desc">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <ul class="living-proof__stats stats clear-list">
-          <li class="stats__item">
-            <fieldset class="stats__group">
-              <legend class="stats__desc">снижение веса</legend>
-              <p class="stats__number">5 кг</p>
-            </fieldset>
-          </li>
-          <li class="stats__item">
-            <fieldset class="stats__group">
-              <legend class="stats__desc">затрачено времени</legend>
-              <p class="stats__number">60 дней</p>
-            </fieldset>
-          </li>
-        </ul>
-        <div class="living-proof__expenses expenses">
-          <h3 class="expenses__title">Затраты на питание:</h3>
-          <p class="expenses__prise">15 000 РУБ.</p>
-        </div>
-        <div class="living-proof__changes changes">
-          <h3 class="visually-hidden">Как кот Борис поменялся благодаря нашему питанию.</h3>
-          <div class="changes__before">
-            <img class="changes__image" src="img/before-cat.png" alt="Каким кот Борис был раньше.">
+      <section class="living-proof">
+        <div class="wrapper living-proof__flex">
+          <div class="living-proof__main">
+            <h2 class="living-proof__title">Живой пример</h2>
+            <p class="living-proof__desc">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <ul class="living-proof__stats stats clear-list">
+              <li class="stats__item">
+                <p class="stats__number">5 кг
+                  <span class="stats__desc">снижение веса</span>
+                </p>
+              </li>
+              <li class="stats__item">
+                <p class="stats__number">60 дней
+                  <span class="stats__desc">затрачено времени</span>
+                </p>
+              </li>
+            </ul>
+            <div class="living-proof__expenses expenses">
+              <h3 class="expenses__title">Затраты на питание:</h3>
+              <p class="expenses__prise">15 000 РУБ.</p>
+            </div>
           </div>
-          <div class="changes__after">
-            <img class="changes__image" src="img/" alt="Каким кот Борис стал после нашего питания.">
-          </div>
-          <div class="changes__slider slider">
-            <button class="slider__button" type="button">Было</button>
-            <div class="slider__control"></div>
-            <button class="slider__button" type="button">Стало</button>
+          <div class="living-proof__changes changes">
+            <h3 class="visually-hidden">Как кот Борис поменялся благодаря нашему питанию.</h3>
+            <div class="changes__before">
+              <img class="changes__image" src="img/before-cat.png" alt="Каким кот Борис был раньше.">
+            </div>
+            <!--<div class="changes__after">
+              <img class="changes__image visually-hidden" src="img/after-cat.png" alt="Каким кот Борис стал после нашего питания.">
+            </div>-->
+            <div class="changes__slider slider">
+              <button class="slider__button" type="button">Было</button>
+              <div class="slider__control"></div>
+              <button class="slider__button" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
@@ -139,22 +142,27 @@
 
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
-        <div class="wrapper">
-          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <address class="contacts__address">
-            ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург
-          </address>
+        <div class="wrapper wrapper--coop-data">
+          <div class="contacts__data">
+            <div class="contacts__wrapper wrapper">
+              <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+              <address class="contacts__address">
+                ул. Большая
+                Конюшенная, д. 19/8
+                Санкт-Петербург
+              </address>
+            </div>
+          </div>
         </div>
-        <img class="contacts__map" src="img/map.jpg" alt="Мы на карте.">
-        <!-- <iframe class="contacts__map" src="https://www.google.ru/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru&ehbc=2E312F"></iframe> -->
+        <div class="wrapper wrapper--map">
+          <img class="contacts__map" src="img/map.jpg" alt="Мы на карте.">
+        </div>
       </section>
-      <div class="wrapper">
+      <div class="page-footer__wrapper wrapper">
         <section class="page-footer__logo">
           <a href="#">
             <h2 class="visually-hidden">Перейти на главную</h2>
-            <img class="page-footer__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
+            <img class="page-footer__logo-lable" src="img/logo_label.svg" width="128" height="24" alt="Cat energy">
           </a>
         </section>
         <section class="page-footer__social social">
@@ -180,7 +188,7 @@
         <section class="page-footer__developer developer">
           <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
             <h2 class="developer__title">HTML Academy</h2>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+            <svg class="developer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
             <span class="visually-hidden">Перейти на сайт: "HTML и CSS. Адаптивная вёрстка и автоматизация"</span>
           </a>
         </section>

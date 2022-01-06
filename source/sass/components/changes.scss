@@ -1,1 +1,16 @@
-.changes {}
+.changes {
+  text-align: center;
+}
+
+.changes__image {
+  height: 210px;
+  width: auto;
+
+  @include s768 {
+    height: 500px;
+  }
+}
+
+.changes__slider {
+  margin-top: 15px;
+}

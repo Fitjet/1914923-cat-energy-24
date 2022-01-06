@@ -1,8 +1,15 @@
 .developer__link {
+  display: flex;
   text-decoration: none;
 }
 
 .developer__title {
   @include a-r-s16-h18;
-  color: $grey-6;
+  color: $grey-4;
+}
+
+.developer__icon {
+  width: auto;
+  height: 41px;
+  fill: $special-grey;
 }

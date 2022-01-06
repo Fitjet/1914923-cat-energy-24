@@ -1,0 +1,11 @@
+@mixin s768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin s1300 {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
