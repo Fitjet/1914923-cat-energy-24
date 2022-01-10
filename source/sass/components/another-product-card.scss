@@ -9,7 +9,7 @@
 .another-product-card__item {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  padding-top: 19px;
+  padding-bottom: 19px;
   border-top: 1px solid $grey-3;
 
   &:last-child {
