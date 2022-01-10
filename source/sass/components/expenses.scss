@@ -14,7 +14,7 @@
   font-weight: 400;
   font-size: 20px;
 
-  @media (max-width: 767px) {
+  @include s-767 {
     font-size: 14px;
   }
 }

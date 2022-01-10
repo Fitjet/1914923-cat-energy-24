@@ -1,6 +1,6 @@
 .main-nav {
   &--hidden {
-    @media (max-width: 767px) {
+    @include s-767 {
       display: none;
     }
   }

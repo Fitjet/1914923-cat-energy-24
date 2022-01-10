@@ -1,4 +1,35 @@
 .another-products__title {
   @include o-r-s24-h24;
   color: $black;
+  margin-top: 50px;
+  margin-bottom: 36px;
+
+  @include s768 {
+    @include o-r-s36-h36;
+    margin-top: 68px;
+    margin-bottom: 80px;
+  }
+
+  @include s1300 {
+    margin-top: 75px;
+  }
+}
+
+.another-products__wrapper {
+  @include s1300 {
+    display: flex;
+  }
+}
+
+.another-products__gift {
+  margin-top: 35px;
+
+  @include s768 {
+    margin-top: 69px;
+  }
+
+  @include s1300 {
+    margin-top: 0;
+    margin-left: 80px;
+  }
 }

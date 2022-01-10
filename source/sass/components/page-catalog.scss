@@ -1,4 +1,27 @@
 .page-catalog__title {
   @include o-r-s36-h36;
   color: $black;
+  margin-top: 27px;
+  margin-bottom: 41px;
+
+  @include s768 {
+    @include o-r-s60-h60;
+    margin-top: 64px;
+    margin-bottom: 82px;
+  }
+}
+
+.page-catalog__another-products {
+  margin-top: 25px;
+  margin-bottom: 35px;
+
+  @include s768 {
+    margin-top: 68px;
+    margin-bottom: 76px;
+  }
+
+  @include s1300 {
+    margin-top: 75px;
+    margin-bottom: 86px;
+  }
 }

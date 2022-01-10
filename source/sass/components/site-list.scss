@@ -17,6 +17,9 @@
 
   @include s1300 {
     @include o-r-s20-h30;
-    color: $white;
+
+    &--white {
+      color: $white;
+    }
   }
 }
