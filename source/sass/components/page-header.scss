@@ -1,9 +1,10 @@
 .page-header {
+  display: flex;
+  align-items: center;
   min-height: 65px;
   padding-top: 10px;
 
   @include s768 {
-    display: flex;
     padding-top: 24px;
   }
 
