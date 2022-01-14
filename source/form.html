@@ -2,19 +2,20 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="page-header wrapper">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-img" src="img/logo_mobile.svg" width="34" height="38" alt="Перейти на главную">
         <img class="page-header__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__button button"  type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="page-header__button button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="page-header__main-nav main-nav main-nav--hidden">
         <ul class="main-nav__list site-list clear-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
@@ -29,73 +30,75 @@
       </nav>
     </header>
 
-    <main class="page-form wrapper">
+    <main class="page-form wrapper wrapper--main-form">
       <h1 class="page-form__title">Подбор программы</h1>
       <section class="page-form__questionnaire questionnaire">
         <h2 class="questionnaire__title">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </h2>
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru/" method="GET">
-          <fieldset class="questionnaire__fieldset">
-            <legend class="visually-hidden">О питомце</legend>
-            <ul class="questionnaire__list clear-list ">
-              <li class="questionnaire__item">
-                <label class="questionnaire__control input">
-                  <span class="input__label">Имя:*</span>
-                  <input class="input__entry" type="text" name="pet-name" placeholder="Барсик" required>
-                </label>
-              </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control input">
-                  <span class="input__label">Вес (кг):*</span>
-                  <input class="input__entry" type="number" name="pet-weight" placeholder="7" required>
-                </label>
-              </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control input">
-                  <span class="input__label">Возраст (лет):</span>
-                  <input class="input__entry" type="number" name="pet-age" placeholder="7">
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="questionnaire__fieldset">
-            <legend class="visually-hidden">Подбор программы питания</legend>
-            <ul class="questionnaire__list clear-list">
-              <li class="questionnaire__item">
-                <label class="questionnaire__control choice choice--radio">
-                  <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="slim" checked>
-                  <span class="choice__mark"></span>
-                  <span class="choice__label">Похудение</span>
-                </label>
-              </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control choice choice--radio">
-                  <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="pro">
-                  <span class="choice__mark"></span>
-                  <span class="choice__label">Набор массы</span>
-                </label>
-              </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control choice choice--radio">
-                  <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="help-with-selection">
-                  <span class="choice__mark"></span>
-                  <span class="choice__label">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="questionnaire__wrapper">
+            <fieldset class="questionnaire__fieldset">
+              <legend class="visually-hidden">О питомце</legend>
+              <ul class="questionnaire__list clear-list ">
+                <li class="questionnaire__item input">
+                  <label class="input__control">
+                    <span class="input__label">Имя:*</span>
+                    <input class="input__entry" type="text" name="pet-name" placeholder="Барсик" required>
+                  </label>
+                </li>
+                <li class="questionnaire__item input">
+                  <label class="input__control">
+                    <span class="input__label">Вес (кг):*</span>
+                    <input class="input__entry" type="number" name="pet-weight" placeholder="7" required>
+                  </label>
+                </li>
+                <li class="questionnaire__item input">
+                  <label class="input__control">
+                    <span class="input__label">Возраст (лет):</span>
+                    <input class="input__entry" type="number" name="pet-age" placeholder="7">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--border">
+              <legend class="visually-hidden">Подбор программы питания</legend>
+              <ul class="questionnaire__list clear-list">
+                <li class="questionnaire__item choice choice--radio">
+                  <label class="choice__control">
+                    <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="slim" checked>
+                    <span class="choice__mark"></span>
+                    <span class="choice__label">Похудение</span>
+                  </label>
+                </li>
+                <li class="questionnaire__item choice choice--radio">
+                  <label class="choice__control">
+                    <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="pro">
+                    <span class="choice__mark"></span>
+                    <span class="choice__label">Набор массы</span>
+                  </label>
+                </li>
+                <li class="questionnaire__item choice choice--radio">
+                  <label class="coice__control">
+                    <input class="choice__entry visually-hidden" type="radio" name="type-of-diet" value="help-with-selection">
+                    <span class="choice__mark"></span>
+                    <span class="choice__label">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="questionnaire__fieldset">
             <legend class="questionnaire__legend">Контактные данные (владельца кота)</legend>
-            <ul class="questionnaire__list clear-list">
-              <li class="questionnaire__item">
-                <label class="questionnaire__control input input--email">
+            <ul class="questionnaire__list questionnaire__list--unfolding clear-list">
+              <li class="questionnaire__item input input--email">
+                <label class="input__control">
                   <span class="input__label">E-mail:*</span>
                   <input class="input__entry" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control input input--phone">
+              <li class="questionnaire__item input input--phone">
+                <label class="input__control">
                   <span class="input__label">Телефон:*</span>
                   <input class="input__entry" type="tel" name="tel-number" placeholder="8 (960) 900-60-90" required>
                 </label>
@@ -108,30 +111,30 @@
           </fieldset>
           <fieldset class="questionnaire__fieldset">
             <legend class="questionnaire__legend">Дополнительно</legend>
-            <ul class="questionnaire__list clear-list">
-              <li class="questionnaire__item">
-                <label class="questionnaire__control choice">
+            <ul class="questionnaire__list questionnaire__list--transformation clear-list">
+              <li class="questionnaire__item choice">
+                <label class="questionnaire__control">
                   <input class="choice__entry visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="choice__mark"></span>
                   <span class="choice__label">Cахарозаменитель</span>
                 </label>
               </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control choice">
+              <li class="questionnaire__item choice">
+                <label class="questionnaire__control">
                   <input class="choice__entry visually-hidden" type="checkbox" name="water">
                   <span class="choice__mark"></span>
                   <span class="choice__label">Питьевая вода</span>
                 </label>
               </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control choice">
+              <li class="questionnaire__item choice">
+                <label class="questionnaire__control">
                   <input class="choice__entry visually-hidden" type="checkbox" name="milk">
                   <span class="choice__mark"></span>
                   <span class="choice__label">Молоко</span>
                 </label>
               </li>
-              <li class="questionnaire__item">
-                <label class="questionnaire__control choice">
+              <li class="questionnaire__item choice">
+                <label class="questionnaire__control">
                   <input class="choice__entry visually-hidden" type="checkbox" name="vitamins">
                   <span class="choice__mark"></span>
                   <span class="choice__label">Витамины</span>
@@ -139,29 +142,37 @@
               </li>
             </ul>
           </fieldset>
-          <button class="questionnaire__button button" type="submit">Отправить заявку</button>
-          <p class="questionnaire__explanation">* — Обязательные поля</p>
+          <div class="questionnaire__wrapper--footer">
+            <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+            <p class="questionnaire__explanation">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
-        <div class="wrapper">
-          <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <address class="contacts__address">
-            ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург
-          </address>
+        <div class="wrapper wrapper--coop-data">
+          <div class="contacts__data">
+            <div class="contacts__wrapper wrapper">
+              <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+              <address class="contacts__address">
+                ул. Большая
+                Конюшенная, д. 19/8
+                Санкт-Петербург
+              </address>
+            </div>
+          </div>
         </div>
-        <img class="contacts__map" src="img/map.jpg" alt="Мы на карте.">
+        <div class="wrapper wrapper--map">
+          <img class="contacts__map" src="img/map.jpg" alt="Мы на карте.">
+        </div>
       </section>
-      <div class="wrapper">
+      <div class="page-footer__wrapper wrapper">
         <section class="page-footer__logo">
           <a href="#">
             <h2 class="visually-hidden">Перейти на главную</h2>
-            <img class="page-footer__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
+            <img class="page-footer__logo-lable" src="img/logo_label.svg" width="128" height="24" alt="Cat energy">
           </a>
         </section>
         <section class="page-footer__social social">
@@ -187,7 +198,7 @@
         <section class="page-footer__developer developer">
           <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
             <h2 class="developer__title">HTML Academy</h2>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+            <svg class="developer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
             <span class="visually-hidden">Перейти на сайт: "HTML и CSS. Адаптивная вёрстка и автоматизация"</span>
           </a>
         </section>

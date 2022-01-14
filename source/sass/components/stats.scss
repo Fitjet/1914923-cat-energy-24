@@ -1,3 +1,17 @@
+.stats {
+  display: flex;
+}
+
+.stats__item {
+  &:last-child {
+    margin-left: auto;
+
+    @include s768 {
+      margin-left: 42px;
+    }
+  }
+}
+
 .stats__number {
   @include o-r-s24-h24;
   border: 1px solid $grey-5;

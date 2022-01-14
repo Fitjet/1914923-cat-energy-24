@@ -4,9 +4,29 @@
   background-position: center;
   background-size: cover;
   text-align: center;
+  box-sizing: border-box;
+  min-height: 290px;
+  padding: 42px;
+
+  @include s768 {
+    min-height: 200px;
+    text-align: right;
+  }
+
+  @include s1300 {
+    min-height: auto;
+    text-align: center;
+  }
 }
 
 .gift__desc {
   @include a-r-s16-h20;
   color: $white;
+  width: 162px;
+  margin: 142px auto 0;
+
+  @include s768-1299 {
+    margin: 28px 82px 28px auto;
+    text-align: left;
+  }
 }

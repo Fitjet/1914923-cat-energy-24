@@ -1,1 +1,12 @@
-.main-products {}
+.main-products__list {
+  @include s768 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @include s1300 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 62px 80px;
+  }
+}

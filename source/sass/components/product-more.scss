@@ -1,9 +1,37 @@
+.product-more {
+  text-align: center;
+  margin-top: auto;
+
+  @include s768 {
+    border: 2px solid $grey-1;
+    padding: 38px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .product-more__title {
   @include o-r-s16-h20;
   text-transform: uppercase;
   color: $grey-6;
+  margin-top: 78px;
+  margin-bottom: 8px;
+
+  @include s768 {
+    @include o-r-s20-h22;
+    margin: 112px auto 23px;
+    width: 135px;
+  }
 }
 
 .product-more__desc {
   @include a-r-s12-h16;
+  margin: 8px auto 20px;
+
+  @include s768 {
+    @include a-r-s16-h18;
+    margin-bottom: 87px;
+    width: 168px;
+  }
 }

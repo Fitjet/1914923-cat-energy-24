@@ -38,6 +38,11 @@
   @include arial-font;
 }
 
+@mixin a-r-s16-h16 {
+  @include typography_template(16px, 16px);
+  @include arial-font;
+}
+
 @mixin a-r-s16-h18 {
   @include typography_template(16px, 18px);
   @include arial-font;
@@ -85,6 +90,16 @@
 
 @mixin o-r-s20-h20 {
   @include typography_template(20px, 20px);
+  @include oswald-font;
+}
+
+@mixin o-r-s20-h22 {
+  @include typography_template(20px, 22px);
+  @include oswald-font;
+}
+
+@mixin o-r-s20-h24 {
+  @include typography_template(20px, 24px);
   @include oswald-font;
 }
 

@@ -2,25 +2,162 @@
   @include o-r-s14-h18;
   text-transform: uppercase;
   color: $black;
+  width: 90%;
+
+  @include s768 {
+    @include o-r-s20-h30;
+    width: 325px;
+  }
+}
+
+.questionnaire__form {
+  margin-top: 39px;
+  margin-bottom: 32px;
+
+  @include s768 {
+    margin-top: 66px;
+    margin-bottom: 72px;
+  }
+
+  @include s1300 {
+    margin-bottom: 82px;
+  }
 }
 
 .questionnaire__fieldset {
   border: none;
   padding: 0;
   margin: 0;
+  margin-top: 25px;
+
+  @include s768 {
+    margin-top: 65px;
+  }
+
+  &:first-child {
+    @include s1300 {
+      width: 50%;
+    }
+  }
+
+  &--border {
+    box-sizing: border-box;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    margin: 0;
+
+    @include s768 {
+      padding: 25px 28px;
+      border: 1px solid $border-grey-1;
+    }
+
+    @include s1300 {
+      margin: 85px 0 20px 78px;
+      width: 50%;
+    }
+  }
+}
+
+.questionnaire__list {
+  &--unfolding {
+    @include s1300 {
+      display: flex;
+    }
+  }
+
+  &--transformation {
+    @include s768 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 60px;
+    }
+
+    @include s1300 {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px 80px;
+    }
+  }
+}
+
+.questionnaire__item {
+  @include o-r-s16-h18;
+  text-transform: uppercase;
+  width: 100%;
+
+  @include s768 {
+    @include o-r-s20-h30;
+  }
+}
+
+.questionnaire__wrapper {
+  @include s1300 {
+    display: flex;
+  }
+
+  &--footer {
+    margin-top: 34px;
+
+    @include s768 {
+      display: flex;
+      margin-top: 54px;
+    }
+
+    @include s1300 {
+      margin-top: 60px;
+    }
+  }
 }
 
 .questionnaire__legend {
   @include o-r-s24-h26;
   color: $black;
+  margin-bottom: 35px;
+
+  @include s768 {
+    @include o-r-s36-h36;
+  }
 }
 
 .questionnaire__comment {
   @include o-r-s16-h18;
   text-transform: uppercase;
-  color: $grey-6;
+  color: $grey-4;
+  box-sizing: border-box;
+  padding: 10px 13px;
+  width: 100%;
+  height: 150px;
+  border: 1px solid $border-grey-1;
+  resize: none;
+
+  @include s768 {
+    @include o-r-s20-h30;
+    padding: 10px 19px;
+    height: 174px;
+  }
 }
 
 .questionnaire__explanation {
   @include a-r-s14-h16;
+  width: 100%;
+
+  @include s-767 {
+    text-align: center;
+  }
+
+  @include s768 {
+    font-size: 16px;
+    margin-left: 60px;
+  }
+
+  @include s1300 {
+    margin-left: 80px;
+  }
+}
+
+.questionnaire__button {
+  width: 100%;
+
+  @include s768 {
+    @include o-r-s20-h20;
+  }
 }

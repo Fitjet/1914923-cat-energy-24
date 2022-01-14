@@ -1,11 +1,25 @@
 .expenses {
+  display: flex;
   line-height: 20px;
-  text-align: center;
+  justify-content: center;
   text-transform: uppercase;
   color: $black;
 
   @include s768 {
     @include o-r-s20-h20;
+  }
+
+  @include s768-1299 {
+    width: 175px;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  @include s1300 {
+    width: 328px;
+    justify-content: space-between;
   }
 }
 
@@ -14,7 +28,7 @@
   font-weight: 400;
   font-size: 20px;
 
-  @media (max-width: 767px) {
+  @include s-767 {
     font-size: 14px;
   }
 }

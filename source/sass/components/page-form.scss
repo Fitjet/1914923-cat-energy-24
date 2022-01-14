@@ -1,4 +1,12 @@
 .page-form__title {
   @include o-r-s36-h36;
+  margin-top: 27px;
+  margin-bottom: 37px;
   color: $black;
+
+  @include s768 {
+    @include o-r-s60-h60;
+    margin-top: 50px;
+    margin-bottom: 54px;
+  }
 }

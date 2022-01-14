@@ -9,3 +9,15 @@
     @content;
   }
 }
+
+@mixin s-767 {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin s768-1299 {
+  @media (min-width: 768px) and (max-width: 1299px) {
+    @content;
+  }
+}

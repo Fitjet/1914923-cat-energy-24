@@ -7,6 +7,7 @@
   text-decoration: none;
   color: $white;
   border: none;
+  padding: 10px 0;
   margin: 0;
 
   &--main {
@@ -23,6 +24,6 @@
 
   &--silver {
     background-color: $grey-1;
-    color: $grey-6;
+    color: $grey-4;
   }
 }

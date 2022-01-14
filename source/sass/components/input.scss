@@ -1,10 +1,45 @@
 .input {
-  @include o-r-s16-h18;
-  text-transform: uppercase;
-  color: $grey-6;
+  color: $grey-4;
+  margin: 14px 0;
+
+  @include s768 {
+    margin: 20px 0;
+  }
+
+  &--phone {
+    @include s1300 {
+      margin-left: 78px;
+    }
+  }
+}
+
+.input__control {
+  display: flex;
+  align-items: center;
+}
+
+.input__label {
+  margin-right: 12px;
+  min-width: fit-content;
+
+  @include s768 {
+    margin-right: 16px;
+  }
 }
 
 .input__entry {
   font: inherit;
   text-transform: uppercase;
+  box-sizing: border-box;
+  border: 1px solid $border-grey-1;
+  padding: 13px 16px;
+  width: 100%;
+
+  &::placeholder {
+    color: $grey-4;
+  }
+
+  @include s768 {
+    padding: 10px 20px;
+  }
 }
