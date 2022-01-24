@@ -1,14 +1,5 @@
 .main-nav {
-  &--hidden {
-    @include s-767 {
-      display: none;
-    }
-  }
-}
-
-.main-nav__list {
-  @include s768 {
-    display: flex;
-    height: 100%;
+  @include s-767 {
+    width: 100%;
   }
 }

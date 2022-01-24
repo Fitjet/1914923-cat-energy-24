@@ -148,6 +148,11 @@
   @include oswald-font;
 }
 
+@mixin o-r-s280-h280 {
+  @include typography_template(280px, 280px);
+  @include oswald-font;
+}
+
 @mixin o-m-s20-h20 {
   @include typography_template(20px, 20px, 500);
   @include oswald-font;

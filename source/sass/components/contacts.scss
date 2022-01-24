@@ -10,7 +10,8 @@
   @include s1300 {
     position: absolute;
     width: 565px;
-    top: 26%;
+    top: 50%;
+    transform: translate(0, -50%);
     background-color: $white;
   }
 }
@@ -36,7 +37,7 @@
 .contacts__title {
   @include o-r-s16-h20;
   text-transform: uppercase;
-  color: $grey-6;
+  color: $grey-1;
 
   @include s768 {
     @include o-r-s20-h26;
@@ -46,7 +47,7 @@
 
 .contacts__address {
   @include a-r-s14-h20;
-  color: $grey-6;
+  color: $grey-1;
 
   @include s768 {
     @include a-r-s16-h20;

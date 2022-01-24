@@ -11,6 +11,12 @@
   }
 }
 
+.changes__after {
+  &--hidden {
+    display: none;
+  }
+}
+
 .changes__slider {
   margin-top: 15px;
 }

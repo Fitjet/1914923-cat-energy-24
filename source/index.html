@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
     <div class="modified-header">
-      <header class="page-header wrapper">
+      <header class="page-header page-header--nav-closed page-header--nojs wrapper">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-img" src="img/logo_mobile.svg" width="34" height="38" alt="Перейти на главную">
           <img class="page-header__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
@@ -16,7 +16,7 @@
         <button class="page-header__button button" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <nav class="page-header__main-nav main-nav main-nav--hidden">
+        <nav class="page-header__main-nav main-nav">
           <ul class="main-nav__list site-list clear-list">
             <li class="site-list__item">
               <a class="site-list__link site-list__link--white site-list__link--current">Главная</a>
@@ -47,14 +47,14 @@
       <section class="nutrition-menu wrapper">
         <h2 class="visually-hidden">Варианты диет для Вашего кота</h2>
         <ul class="nutrition-menu__list clear-list">
-          <li class="nutrition-menu__item nutrition-card">
+          <li class="nutrition-menu__item nutrition-card nutrition-card--slim">
             <h3 class="nutrition-card__title">Похудение</h3>
             <p class="nutrition-card__desc">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <a class="nutrition-card__link" href="#">Каталог slim</a>
           </li>
-          <li class="nutrition-menu__item nutrition-card">
+          <li class="nutrition-menu__item nutrition-card nutrition-card--pro">
             <h3 class="nutrition-card__title">Набор массы</h3>
             <p class="nutrition-card__desc">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -129,13 +129,17 @@
             <div class="changes__before">
               <img class="changes__image" src="img/before-cat.png" alt="Каким кот Борис был раньше.">
             </div>
-            <!--<div class="changes__after">
-              <img class="changes__image visually-hidden" src="img/after-cat.png" alt="Каким кот Борис стал после нашего питания.">
-            </div>-->
+            <div class="changes__after changes__after--hidden">
+              <img class="changes__image" src="img/after-cat.png" alt="Каким кот Борис стал после нашего питания.">
+            </div>
             <div class="changes__slider slider">
-              <button class="slider__button" type="button">Было</button>
-              <div class="slider__control"></div>
-              <button class="slider__button" type="button">Стало</button>
+              <button class="slider__button slider__button-prior" type="button">Было</button>
+              <div class="slider__control" id="slider">
+                <div class="slider__toggle">
+                  <span class="visually-hidden">Слайдер</span>
+                </div>
+              </div>
+              <button class="slider__button slider__button-become" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -162,7 +166,7 @@
       </section>
       <div class="page-footer__wrapper wrapper">
         <section class="page-footer__logo">
-          <a href="#">
+          <a class="page-footer__logo-link" href="#">
             <h2 class="visually-hidden">Перейти на главную</h2>
             <img class="page-footer__logo-lable" src="img/logo_label.svg" width="128" height="24" alt="Cat energy">
           </a>
@@ -197,4 +201,86 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    var headerMain = document.querySelector('.page-header');
+    var headerButton = document.querySelector('.page-header__button');
+    var sliderPrior = document.querySelector('.slider__button-prior');
+    var sliderBecome = document.querySelector('.slider__button-become');
+    var thumb = slider.querySelector('.slider__toggle');
+
+    headerMain.classList.remove('page-header--nojs');
+
+    headerButton.addEventListener('click', function() {
+      if (headerMain.classList.contains('page-header--nav-closed')) {
+        headerMain.classList.remove('page-header--nav-closed');
+        headerMain.classList.add('page-header--nav-opened');
+      } else {
+        headerMain.classList.add('page-header--nav-closed');
+        headerMain.classList.remove('page-header--nav-opened');
+      }
+    });
+
+    sliderPrior.addEventListener('click', function() {
+      if (thumb.classList.contains('slider__toggle--become')) {
+        thumb.style.left = null;
+        thumb.classList.remove('slider__toggle--become');
+        thumb.classList.add('slider__toggle--prior');
+      } else {
+        thumb.style.left = null;
+        thumb.classList.add('slider__toggle--prior');
+      }
+    });
+
+    sliderBecome.addEventListener('click', function() {
+      if (thumb.classList.contains('slider__toggle--prior')) {
+        thumb.style.left = null;
+        thumb.classList.remove('slider__toggle--prior');
+        thumb.classList.add('slider__toggle--become');
+      } else {
+        thumb.style.left = null;
+        thumb.classList.add('slider__toggle--become');
+      }
+    });
+
+    thumb.addEventListener('click', function() {
+      if (thumb.classList.contains('slider__toggle--prior')) {
+        thumb.classList.remove('slider__toggle--prior');
+      } else if (thumb.classList.contains('slider__toggle--become')) {
+        thumb.classList.remove('slider__toggle--become');
+      }
+    });
+
+    thumb.onmousedown = function(event) {
+      event.preventDefault();
+      var shiftX = event.clientX - thumb.getBoundingClientRect().left;
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+
+      function onMouseMove(event) {
+        var newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
+
+        if (newLeft < 0) {
+          newLeft = 0;
+        }
+
+        var rightEdge = slider.offsetWidth - thumb.offsetWidth;
+
+        if (newLeft > rightEdge) {
+          newLeft = rightEdge;
+        }
+
+        thumb.style.left = newLeft + 'px';
+      }
+
+      function onMouseUp() {
+        document.removeEventListener('mouseup', onMouseUp);
+        document.removeEventListener('mousemove', onMouseMove);
+      }
+    };
+
+    thumb.ondragstart = function() {
+      return false;
+    };
+  </script>
 </html>

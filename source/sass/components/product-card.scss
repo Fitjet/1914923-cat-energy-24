@@ -7,7 +7,7 @@
     text-align: center;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: linear-gradient(to top, $grey-1 430px, $white 430px);
+    background-image: linear-gradient(to top, $grey-9 430px, $white 430px);
   }
 }
 
@@ -38,7 +38,7 @@
 .product-card__title {
   @include o-r-s16-h20;
   text-transform: uppercase;
-  color: $grey-5;
+  color: $grey-2;
   max-width: 76px;
 
   @include s768 {
@@ -58,13 +58,13 @@
 
 .product-card__item {
   @include a-r-s12-h16;
-  color: $grey-6;
+  color: $grey-1;
   display: flex;
 
   @include s768 {
     @include a-r-s16-h16;
     padding: 8px 0;
-    border-bottom: 1px solid $grey-3;
+    border-bottom: 1px solid $grey-5;
   }
 }
 

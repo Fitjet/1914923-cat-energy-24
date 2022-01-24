@@ -1,16 +1,16 @@
 .living-proof {
-  background-color: $grey-2;
+  background-color: $grey-7;
   padding-top: 25px;
   padding-bottom: 40px;
 
   @include s768 {
-    background-image: linear-gradient(to bottom, $white 70%, $grey-2 70%);
+    background-image: linear-gradient(to bottom, $white 70%, $grey-7 70%);
     padding-top: 40px;
     padding-bottom: 60px;
   }
 
   @include s1300 {
-    background-image: linear-gradient(to bottom, $white 30%, $grey-2 30%);
+    background-image: linear-gradient(to bottom, $white 30%, $grey-7 30%);
     padding-top: 20px;
     padding-bottom: 70px;
   }

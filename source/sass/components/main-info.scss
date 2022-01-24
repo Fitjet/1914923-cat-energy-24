@@ -35,24 +35,99 @@
 }
 
 .main-info__item {
-  @include s768 {
-    &--icon-leaf {
+  position: relative;
+
+  &::before {
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    background-color: $green-1;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto 20px auto 0;
+    content: "";
+
+    @include s768 {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @include o-r-s280-h280;
+    display: none;
+    position: absolute;
+    top: -37px;
+    right: 0;
+    text-align: center;
+    color: $grey-9;
+    z-index: -1;
+
+    @include s768 {
+      display: block;
+    }
+  }
+
+  &--icon-leaf {
+    &::before {
+      background-image: url("../../img/icons/icon_leaf.svg");
+    }
+
+    &::after {
+      content: "1";
+    }
+
+    @include s768 {
       grid-column: 1/2;
     }
+  }
 
-    &--icon-tub {
-      grid-column: 3/4;
+  &--icon-tub {
+    &::before {
+      background-image: url("../../img/icons/icon_tub.svg");
     }
 
-    &--icon-eat {
+    &::after {
+      content: "2";
+    }
+
+    @include s768 {
+      grid-column: 3/4;
+    }
+  }
+
+  &--icon-eat {
+    &::before {
+      background-image: url("../../img/icons/icon_eat.svg");
+    }
+
+    &::after {
+      content: "3";
+    }
+
+    @include s768 {
       grid-column: 1/2;
       grid-row: 3/-1;
     }
+  }
 
-    &--icon-alarm {
+  &--icon-alarm {
+    &::before {
+      background-image: url("../../img/icons/icon_alarm.svg");
+    }
+
+    &::after {
+      content: "4";
+    }
+
+    @include s768 {
       grid-column: 3/4;
       grid-row: 3/-1;
     }
+  }
+
+  @include s-767 {
+    display: flex;
   }
 
   @include s1300 {

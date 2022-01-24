@@ -3,7 +3,7 @@
   margin-top: auto;
 
   @include s768 {
-    border: 2px solid $grey-1;
+    border: 2px solid $grey-9;
     padding: 38px;
     text-align: center;
     display: flex;
@@ -14,7 +14,7 @@
 .product-more__title {
   @include o-r-s16-h20;
   text-transform: uppercase;
-  color: $grey-6;
+  color: $grey-1;
   margin-top: 78px;
   margin-bottom: 8px;
 
