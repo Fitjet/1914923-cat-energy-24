@@ -33,7 +33,7 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 40px);
-  gap: 4px;
+  gap: 15px;
 }
 
 .social__link {
@@ -51,6 +51,7 @@
 .social__link:focus .social__icon,
 .social__link:active .social__icon {
   fill: $green-1;
+  stroke: $green-1;
 }
 
 .social__icon {
@@ -59,4 +60,5 @@
   top: 50%;
   transform: translate(-50%, -50%);
   fill: $grey-4;
+  stroke: $grey-4;
 }
