@@ -24,6 +24,7 @@
     display: grid;
     grid-template-columns: 250px 134px 250px 74px;
     grid-template-rows: 280px 37px 280px;
+    counter-reset: orderedlist;
   }
 
   @include s1300 {
@@ -35,24 +36,83 @@
 }
 
 .main-info__item {
-  @include s768 {
-    &--icon-leaf {
+  position: relative;
+
+  &::before {
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    background-color: $green-1;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto 20px auto 0;
+    content: "";
+
+    @include s768 {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @include s768 {
+      @include o-r-s280-h280;
+      display: block;
+      position: absolute;
+      top: -37px;
+      right: 0;
+      text-align: center;
+      color: $grey-9;
+      z-index: -1;
+      counter-increment: orderedlist;
+      content: counter(orderedlist);
+    }
+  }
+
+  &--icon-leaf {
+    &::before {
+      background-image: url("../img/icons/icon_leaf.svg");
+    }
+
+    @include s768 {
       grid-column: 1/2;
     }
+  }
 
-    &--icon-tub {
-      grid-column: 3/4;
+  &--icon-tub {
+    &::before {
+      background-image: url("../img/icons/icon_tub.svg");
     }
 
-    &--icon-eat {
+    @include s768 {
+      grid-column: 3/4;
+    }
+  }
+
+  &--icon-eat {
+    &::before {
+      background-image: url("../img/icons/icon_eat.svg");
+    }
+
+    @include s768 {
       grid-column: 1/2;
       grid-row: 3/-1;
     }
+  }
 
-    &--icon-alarm {
+  &--icon-alarm {
+    &::before {
+      background-image: url("../img/icons/icon_alarm.svg");
+    }
+
+    @include s768 {
       grid-column: 3/4;
       grid-row: 3/-1;
     }
+  }
+
+  @include s-767 {
+    display: flex;
   }
 
   @include s1300 {

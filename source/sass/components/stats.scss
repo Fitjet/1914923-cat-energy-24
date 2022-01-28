@@ -36,21 +36,22 @@
   @include a-r-s12-h12;
   text-align: center;
   text-transform: none;
+  padding: 0 8px;
   position: absolute;
-  background-color: $grey-2;
+  background-color: $grey-7;
+  color: $grey-3;
   top: 44px;
-  right: 20px;
-  left: 20px;
+  left: 50%;
+  transform: translate(-50%);
 
   @include s768 {
     @include a-r-s14-h14;
     background-color: $white;
     top: 63px;
-    right: 13px;
-    left: 13px;
+    white-space: nowrap;
   }
 
   @include s1300 {
-    background-color: $grey-2;
+    background-color: $grey-7;
   }
 }

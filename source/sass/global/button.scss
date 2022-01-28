@@ -10,6 +10,16 @@
   padding: 10px 0;
   margin: 0;
 
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $green-3;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+  }
+
   &--main {
     @include o-r-s14-h18;
     padding: 11px 0;
@@ -23,7 +33,17 @@
   }
 
   &--silver {
-    background-color: $grey-1;
-    color: $grey-4;
+    background-color: $grey-9;
+    color: $grey-3;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $grey-8;
+    }
+
+    &:active {
+      color: transparentize($grey-3, 0.7);
+    }
   }
 }

@@ -1,8 +1,17 @@
 .page-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 65px;
-  padding-top: 10px;
+  padding: 0;
+
+  @include s-767 {
+    box-sizing: border-box;
+
+    &--nojs {
+      padding-top: 10px;
+    }
+  }
 
   @include s768 {
     padding-top: 24px;
@@ -13,14 +22,117 @@
   }
 }
 
+.page-header__logo {
+  display: flex;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__logo-img {
+  margin-bottom: 7px;
+}
+
+.page-header__logo-lable {
+  margin-left: 56px;
+
+  @include s768 {
+    margin-left: 14px;
+  }
+}
+
 .page-header__main-nav {
+  @include s-767 {
+    background-color: $white;
+    position: absolute;
+    padding-top: 2px;
+    top: 64px;
+    left: 0;
+    z-index: 5;
+  }
+
   @include s768 {
     margin-left: auto;
+    max-width: 75%;
+  }
+
+  @include s1300 {
+    max-width: 50%;
+  }
+}
+
+@include s-767 {
+  .page-header--nav-closed .page-header__main-nav {
+    display: none;
+  }
+
+  .page-header--nojs .page-header__main-nav {
+    display: block;
+    position: static;
+    margin-top: 9px;
+  }
+
+  .page-header--nojs .page-header__button {
+    display: none;
   }
 }
 
 .page-header__button {
+  width: 38px;
+  height: 38px;
+  background-color: transparent;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+
   @include s768 {
     display: none;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $white;
+  }
+}
+
+.page-header--nav-closed .page-header__button::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 24px;
+  height: 2px;
+  background-color: $black;
+  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+}
+
+.page-header--nav-opened .page-header__button {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }

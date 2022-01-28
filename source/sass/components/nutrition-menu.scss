@@ -1,4 +1,8 @@
 .nutrition-menu__list {
+  @include s768 {
+    color: $black;
+  }
+
   @include s1300 {
     display: flex;
     justify-content: space-between;

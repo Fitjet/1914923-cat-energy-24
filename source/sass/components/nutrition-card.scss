@@ -1,8 +1,81 @@
 .nutrition-card {
-  background-color: $grey-1;
-  padding: 16px 20px 20px;
+  background-color: $grey-9;
+  padding: 24px 20px 20px;
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+  }
+
+  &::after {
+    @include s-767 {
+      display: block;
+      position: absolute;
+      left: 20px;
+      bottom: 57px;
+      right: 20px;
+      height: 1px;
+      background-color: $border-grey-1;
+      content: "";
+    }
+  }
+
+  &--slim::before {
+    background-image: url("../img/icons/cat_back_slim.svg");
+    top: 21px;
+    left: 20px;
+    width: 50px;
+    height: 53px;
+
+    @include s768 {
+      top: 81px;
+      left: auto;
+      right: 62px;
+      width: 200px;
+      height: 212px;
+    }
+
+    @include s1300 {
+      top: 34px;
+      left: 52px;
+      width: 100px;
+      height: 106px;
+    }
+  }
+
+  &--pro::before {
+    background-image: url("../img/icons/cat_back_pro.svg");
+    top: 24px;
+    left: 10px;
+    min-width: 67px;
+    min-height: 50px;
+
+    @include s768 {
+      top: 91px;
+      left: auto;
+      right: 28px;
+      width: 268px;
+      height: 200px;
+    }
+
+    @include s1300 {
+      top: 40px;
+      left: 34px;
+      width: 134px;
+      height: 100px;
+    }
+  }
 
   @include s768 {
+    padding: 40px 316px 55px 52px;
+  }
+
+  @include s1300 {
     padding: 40px 52px 55px;
   }
 }
@@ -11,27 +84,82 @@
   @include o-r-s24-h37;
   text-transform: uppercase;
   color: $black;
+  margin: 6px 0 30px 70px;
 
   @include s768 {
     @include o-r-s36-h36;
+    margin: 32px 0 24px;
+  }
+
+  @include s1300 {
+    margin: 32px 0 73px 162px;
   }
 }
 
 .nutrition-card__desc {
   font-family: "Arial", sans-serif;
+  margin-bottom: 38px;
 
   @include s768 {
     @include a-r-s16-h24;
+    margin-bottom: 48px;
+  }
+
+  @include s1300 {
+    margin-bottom: 23px;
   }
 }
 
 .nutrition-card__link {
   @include o-r-s16-h16;
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
   color: $black;
+  padding: 4px 48px 4px 0;
+
+  &::before {
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 18px;
+    height: 2px;
+    background-color: $black;
+    content: "";
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 5px solid transparent;
+    border-left: 7px solid $black;
+    content: "";
+  }
 
   @include s768 {
     @include o-r-s20-h30;
+    padding-right: 58px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &::before {
+      width: 26px;
+      transform: translate(8px, -50%);
+    }
+
+    &::after {
+      transform: translate(8px, -50%);
+    }
   }
 }
