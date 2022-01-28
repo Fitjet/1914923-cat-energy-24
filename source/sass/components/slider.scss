@@ -77,22 +77,14 @@
     background: $green-1;
     border-radius: 6px;
     content: "";
-    transition: left 0.3s;
-  }
-
-  &--become {
-    &::after {
-      left: 44px;
-      transition: left 0.3s;
-    }
   }
 
   @include s768 {
     width: fit-content;
     bottom: 14px;
-    left: 196px;
+    left: 50%;
+    transform: translate(-50%, 0);
     cursor: ew-resize;
-    transition: left 0.1s;
 
     &::before {
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
@@ -108,16 +100,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: 50%;
-    }
-
-    &--prior {
-      left: 0;
-      transition: left 0.1s;
-    }
-
-    &--become {
-      left: 392px;
-      transition: left 0.1s;
     }
   }
 

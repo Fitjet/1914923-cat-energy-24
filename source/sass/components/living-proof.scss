@@ -32,6 +32,7 @@
   @include s768-1299 {
     display: flex;
     align-items: center;
+    margin-bottom: 85px;
   }
 }
 
@@ -68,10 +69,6 @@
 .living-proof__expenses {
   margin-top: 35px;
   margin-bottom: 40px;
-
-  @include s768 {
-    margin-top: 54px;
-  }
 
   @include s1300 {
     margin-top: 60px;

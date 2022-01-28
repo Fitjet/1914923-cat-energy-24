@@ -93,18 +93,18 @@
   @include s1300 {
     display: flex;
   }
+}
 
-  &--footer {
-    margin-top: 34px;
+.questionnaire__wrapper-footer {
+  margin-top: 34px;
 
-    @include s768 {
-      display: flex;
-      margin-top: 54px;
-    }
+  @include s768 {
+    display: flex;
+    margin-top: 54px;
+  }
 
-    @include s1300 {
-      margin-top: 60px;
-    }
+  @include s1300 {
+    margin-top: 60px;
   }
 }
 

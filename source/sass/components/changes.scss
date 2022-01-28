@@ -2,18 +2,46 @@
   text-align: center;
 }
 
-.changes__image {
-  height: 210px;
-  width: auto;
+.changes__wrapper {
+  margin: 0 auto;
 
   @include s768 {
-    height: 500px;
+    width: 592px;
+    display: flex;
   }
 }
 
-.changes__after {
-  &--hidden {
+.changes__element {
+  @include s768 {
+    height: 511px;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+  }
+}
+
+.changes__element--after {
+  @include s-767 {
     display: none;
+  }
+}
+
+.changes__element--before .changes__image {
+  left: 0;
+}
+
+.changes__element--after .changes__image {
+  right: 0;
+}
+
+.changes__image {
+  height: 232px;
+  max-width: none;
+
+  @include s768 {
+    position: absolute;
+    top: 0;
+    height: 100%;
   }
 }
 

@@ -128,7 +128,6 @@
     height: 2px;
     background-color: $black;
     content: "";
-    transition: right 0.2s, width 0.2s;
   }
 
   &::after {
@@ -140,7 +139,6 @@
     border: 5px solid transparent;
     border-left: 7px solid $black;
     content: "";
-    transition: right 0.2s;
   }
 
   @include s768 {
@@ -157,13 +155,11 @@
   &:focus {
     &::before {
       width: 26px;
-      right: 6px;
-      transition: all 0.2s;
+      transform: translate(8px, -50%);
     }
 
     &::after {
-      right: -6px;
-      transition: all 0.2s;
+      transform: translate(8px, -50%);
     }
   }
 }

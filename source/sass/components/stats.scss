@@ -14,7 +14,7 @@
 
 .stats__number {
   @include o-r-s24-h24;
-  border: 1px solid $grey-2;
+  border: 1px solid $grey-5;
   box-sizing: border-box;
   border-radius: 3px;
   text-align: center;
@@ -36,8 +36,10 @@
   @include a-r-s12-h12;
   text-align: center;
   text-transform: none;
+  padding: 0 8px;
   position: absolute;
   background-color: $grey-7;
+  color: $grey-3;
   top: 44px;
   left: 50%;
   transform: translate(-50%);
@@ -46,9 +48,7 @@
     @include a-r-s14-h14;
     background-color: $white;
     top: 63px;
-    left: 13px;
-    right: 13px;
-    transform: none;
+    white-space: nowrap;
   }
 
   @include s1300 {

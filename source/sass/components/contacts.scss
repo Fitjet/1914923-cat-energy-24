@@ -47,7 +47,7 @@
 
 .contacts__address {
   @include a-r-s14-h20;
-  color: $grey-1;
+  color: $grey-3;
 
   @include s768 {
     @include a-r-s16-h20;
