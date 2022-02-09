@@ -61,7 +61,7 @@ const copyImages = () => {
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon*.png'])
     .pipe(squoosh({
       webp: {}
     }))
@@ -158,7 +158,7 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
-  copyImages,
+  optimizeImages,
   gulp.parallel(
     styles,
     html,
