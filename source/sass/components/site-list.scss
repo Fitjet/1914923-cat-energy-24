@@ -23,8 +23,13 @@
 
 .site-list__item {
   @include s768 {
-    margin: 10px;
-    margin-right: 0;
+    transform: translateX(9px);
+    margin: 10px 0 14px 16px;
+  }
+
+  @include s1300 {
+    margin-bottom: 21px;
+    margin-left: 14px;
   }
 
   &::after {
@@ -89,5 +94,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--current:hover,
+  &--current:active {
+    opacity: 1;
   }
 }

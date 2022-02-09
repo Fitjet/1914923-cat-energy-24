@@ -27,7 +27,8 @@
 
   @include s768 {
     @include o-r-s30-h37;
-    padding: 17px 0;
+    padding-top: 14px;
+    padding-bottom: 19px;
     width: 162px;
   }
 }
@@ -36,9 +37,9 @@
   @include a-r-s12-h12;
   text-align: center;
   text-transform: none;
-  padding: 0 8px;
+  padding: 0 16px;
   position: absolute;
-  background-color: $grey-7;
+  background-color: $grey-8;
   color: $grey-3;
   top: 44px;
   left: 50%;
@@ -46,12 +47,13 @@
 
   @include s768 {
     @include a-r-s14-h14;
+    padding: 0 8px;
     background-color: $white;
     top: 63px;
     white-space: nowrap;
   }
 
   @include s1300 {
-    background-color: $grey-7;
+    background-color: $grey-8;
   }
 }

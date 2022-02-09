@@ -1,17 +1,42 @@
 .another-products__title {
   @include o-r-s24-h24;
   color: $black;
+  background-color: $white;
   margin-top: 50px;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
+  outline: 20px solid $white;
+  width: fit-content;
+
+  &::before {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $green-1;
+    left: 0;
+    transform: translateY(15px);
+    content: "";
+    z-index: -1;
+  }
 
   @include s768 {
     @include o-r-s36-h36;
     margin-top: 68px;
-    margin-bottom: 80px;
+    margin-bottom: 79px;
+    padding-left: 37px;
+    padding-right: 37px;
+    outline-width: 0;
+
+    &::before {
+      transform: translateY(23px);
+    }
   }
 
   @include s1300 {
     margin-top: 75px;
+    margin-bottom: 80px;
+    padding: 0;
+    outline-width: 37px;
   }
 }
 
@@ -22,14 +47,42 @@
 }
 
 .another-products__gift {
-  margin-top: 35px;
+  position: relative;
+  margin-top: 34px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icons/icon_gift.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+  }
 
   @include s768 {
     margin-top: 69px;
+
+    &::before {
+      top: 57px;
+      left: 117px;
+      width: 80px;
+      height: 83px;
+    }
   }
 
   @include s1300 {
     margin-top: 0;
     margin-left: 80px;
+
+    &::before {
+      top: 55px;
+      left: 50%;
+    }
   }
 }

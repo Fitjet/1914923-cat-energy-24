@@ -15,6 +15,7 @@
 
 .input__control {
   display: flex;
+  position: relative;
   align-items: center;
 }
 
@@ -32,14 +33,75 @@
   text-transform: uppercase;
   box-sizing: border-box;
   border: 1px solid $border-grey-3;
-  padding: 13px 16px;
+  padding: 13px 16px 12px;
   width: 100%;
+  outline: none;
+
+  &:hover {
+    border-color: $grey-5;
+  }
+
+  &:focus {
+    border-color: $grey-3;
+    border-width: 2px;
+    padding: 12px 15px;
+
+    @include s768 {
+      padding: 9px 19px;
+    }
+  }
+
+  &:invalid:focus {
+    border-color: $error;
+    border-width: 2px;
+    padding: 12px 15px;
+
+    @include s768 {
+      padding: 9px 19px;
+    }
+  }
 
   &::placeholder {
     color: $grey-3;
   }
 
+  &[type="email"],
+  &[type="tel"] {
+    padding-right: 38px;
+  }
+
   @include s768 {
     padding: 10px 20px;
   }
+}
+
+.input--email .input__icon {
+  stroke: $grey-2;
+}
+
+.input__icon {
+  position: absolute;
+  fill: $black;
+  width: 20px;
+  right: 14px;
+
+  @include s768 {
+    right: 18px;
+  }
+}
+
+.input__entry:focus + .input__icon {
+  fill: $green-1;
+}
+
+.input__entry:invalid:focus + .input__icon {
+  fill: $error;
+}
+
+.input__entry[type="email"]:focus + .input__icon {
+  stroke: $green-1;
+}
+
+.input__entry[type="email"]:invalid:focus + .input__icon {
+  stroke: $error;
 }

@@ -1,24 +1,24 @@
 .living-proof {
-  background-color: $grey-7;
+  background-color: $grey-8;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 44px;
 
   @include s768 {
-    background-image: linear-gradient(to bottom, $white 70%, $grey-7 70%);
+    background-image: linear-gradient(to bottom, $white 57%, $grey-8 57%);
     padding-top: 40px;
     padding-bottom: 60px;
   }
 
   @include s1300 {
-    background-image: linear-gradient(to bottom, $white 30%, $grey-7 30%);
-    padding-top: 20px;
-    padding-bottom: 70px;
+    background-image: linear-gradient(to bottom, $white 30%, $grey-8 30%);
+    padding-top: 18px;
+    padding-bottom: 33px;
   }
 }
 
 .living-proof__main {
   @include s1300 {
-    width: 440px;
+    width: 455px;
   }
 }
 
@@ -33,6 +33,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 85px;
+  }
+
+  @include s1300 {
+    margin-top: 69px;
   }
 }
 
@@ -54,7 +58,8 @@
   }
 
   @include s1300 {
-    margin-bottom: 145px;
+    margin-top: 42px;
+    margin-bottom: 147px;
   }
 }
 
@@ -63,12 +68,13 @@
 
   @include s768 {
     @include a-r-s16-h24;
+    padding-right: 20px;
   }
 }
 
 .living-proof__expenses {
-  margin-top: 35px;
-  margin-bottom: 40px;
+  margin-top: 34px;
+  margin-bottom: 32px;
 
   @include s1300 {
     margin-top: 60px;

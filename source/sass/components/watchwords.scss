@@ -9,33 +9,48 @@
 
   @include s768 {
     @include o-r-s60-h60;
+    margin-top: 49px;
+    margin-bottom: 42px;
     width: 450px;
+  }
+
+  @include s1300 {
+    margin-top: 37px;
+    margin-bottom: 39px;
   }
 }
 
 .watchwords__slogan {
   line-height: 14px;
+  font-size: 14px;
   text-transform: uppercase;
 
   @include s768 {
     @include o-r-s20-h20;
+    margin-left: 2px;
+  }
+
+  @include s1300 {
+    margin-left: 0;
   }
 }
 
 .watchwords__nutrition-img {
-  margin-top: 20px;
+  margin-top: 14px;
+  height: 269px;
+  max-width: none;
 
   @include s768 {
     height: 610px;
     position: absolute;
-    right: -10px;
-    bottom: 0;
+    right: -2px;
+    bottom: -52px;
     z-index: -1;
   }
 
   @include s1300 {
     height: 500px;
-    top: -75px;
+    top: -58px;
     right: 220px;
     bottom: 0;
     z-index: 1;

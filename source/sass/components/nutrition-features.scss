@@ -1,8 +1,22 @@
 .nutrition-features__desc {
   font-family: "Arial", sans-serif;
+  margin: 13px auto;
+
+  &--space {
+    display: none;
+  }
 
   @include s768 {
     @include a-r-s16-h24;
     margin-top: 31px;
+
+    &--space {
+      display: inherit;
+    }
+  }
+
+  @include s1300 {
+    margin-top: 33px;
+    width: 250px;
   }
 }

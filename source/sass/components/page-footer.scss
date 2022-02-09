@@ -1,17 +1,18 @@
 .page-footer {
-  background-color: $grey-9;
+  background-color: $grey-10;
 }
 
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 147px;
+  min-height: 143px;
   text-align: center;
 
   @include s768 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 4px;
   }
 }
 
@@ -29,6 +30,7 @@
 .page-footer__logo-lable {
   padding-top: 10px;
   padding-bottom: 5px;
+  height: 23px;
 
   &:hover,
   &:focus {
@@ -42,6 +44,7 @@
 
 .page-footer__developer {
   @include s-767 {
-    margin: 22px 0;
+    margin-top: 16px;
+    margin-bottom: 18px;
   }
 }
