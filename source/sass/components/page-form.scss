@@ -9,4 +9,8 @@
     margin-top: 50px;
     margin-bottom: 54px;
   }
+
+  @include s1300 {
+    margin-top: 63px;
+  }
 }

@@ -5,10 +5,18 @@
   background-repeat: no-repeat;
   background-position: center top;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background@2x.jpg"), linear-gradient(to bottom, $green-2 303px, $white 303px);
+    background-size: auto 303px;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
   @include s768 {
     color: $black;
     text-align: left;
     background: none;
+    margin-bottom: 51px;
   }
 
   @include s1300 {

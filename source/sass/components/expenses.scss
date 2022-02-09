@@ -31,8 +31,13 @@
   @include s-767 {
     font-size: 14px;
   }
+
+  @include s768 {
+    margin-bottom: 9px;
+  }
 }
 
 .expenses__prise {
   margin: 0;
+  margin-left: 4px;
 }

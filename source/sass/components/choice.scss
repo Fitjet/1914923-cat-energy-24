@@ -6,3 +6,60 @@
     color: $grey-2;
   }
 }
+
+.choice__control {
+  display: flex;
+  align-items: center;
+}
+
+.choice__mark {
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin-right: 16px;
+  background-color: $white;
+  border: 1px solid $grey-5;
+
+  @include s768 {
+    width: 38px;
+    height: 38px;
+    margin-right: 19px;
+  }
+}
+
+.choice:hover .choice__mark {
+  border-color: $border-grey-4;
+}
+
+.choice__entry:focus + .choice__mark {
+  border-color: $grey-3;
+}
+
+.choice__entry[type="radio"] + .choice__mark {
+  border-radius: 50%;
+}
+
+.choice__entry[type="radio"]:checked + .choice__mark::before {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $green-1;
+  content: "";
+
+  @include s768 {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.choice__entry[type="checkbox"]:checked + .choice__mark {
+  background-image: url("../img/icons/tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -8,6 +8,10 @@
   min-height: 290px;
   padding: 42px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cat-gift@2x.jpg");
+  }
+
   @include s768 {
     min-height: 200px;
     text-align: right;
@@ -23,7 +27,7 @@
   @include a-r-s16-h20;
   color: $white;
   width: 162px;
-  margin: 142px auto 0;
+  margin: 146px auto 0;
 
   @include s768-1299 {
     margin: 28px 82px 28px auto;

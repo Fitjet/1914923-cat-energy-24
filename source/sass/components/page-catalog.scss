@@ -6,8 +6,13 @@
 
   @include s768 {
     @include o-r-s60-h60;
+    margin-top: 52px;
+    margin-bottom: 86px;
+  }
+
+  @include s1300 {
     margin-top: 64px;
-    margin-bottom: 82px;
+    margin-bottom: 74px;
   }
 }
 

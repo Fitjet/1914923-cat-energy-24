@@ -4,5 +4,11 @@
     background-image: url("../img/changed-background.jpg"), linear-gradient(to right, $white 50%, $green-2 50%);
     background-repeat: no-repeat;
     background-position: bottom right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/changed-background.jpg"), linear-gradient(to right, $white 50%, $green-2 50%);
+      background-repeat: no-repeat;
+      background-position: bottom right;
+    }
   }
 }

@@ -3,11 +3,18 @@
 }
 
 .changes__wrapper {
-  margin: 0 auto;
+  margin: auto 0;
+  padding-top: 8px;
 
   @include s768 {
     width: 592px;
     display: flex;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @include s1300 {
+    margin-right: 0;
   }
 }
 
@@ -28,6 +35,7 @@
 
 .changes__element--before .changes__image {
   left: 0;
+  height: 98%;
 }
 
 .changes__element--after .changes__image {
@@ -35,7 +43,6 @@
 }
 
 .changes__image {
-  height: 232px;
   max-width: none;
 
   @include s768 {
@@ -46,5 +53,9 @@
 }
 
 .changes__slider {
-  margin-top: 15px;
+  margin-top: 16px;
+
+  @include s768 {
+    margin-top: 28px;
+  }
 }

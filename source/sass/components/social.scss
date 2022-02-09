@@ -27,6 +27,11 @@
       content: "";
     }
   }
+
+  @include s768 {
+    padding-bottom: 5px;
+    padding-left: 34px;
+  }
 }
 
 .social__list {
@@ -60,5 +65,27 @@
   top: 50%;
   transform: translate(-50%, -50%);
   fill: $grey-4;
-  stroke: $grey-4;
+
+  &--facebook {
+    transform: translate(-59%, -50%);
+    stroke: $grey-4;
+  }
+
+  @include s768 {
+    &--vk {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 33px;
+      height: 33px;
+      transform: translate(-80%, -50%);
+    }
+  }
 }

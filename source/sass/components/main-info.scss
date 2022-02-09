@@ -1,5 +1,9 @@
 .main-info {
-  margin-bottom: 50px;
+  margin-bottom: 39px;
+
+  @include s768 {
+    margin-bottom: 10px;
+  }
 }
 
 .main-info__title {
@@ -29,9 +33,9 @@
 
   @include s1300 {
     display: grid;
-    grid-template-columns: repeat(4, 20.5%);
-    grid-template-rows: 280px;
-    gap: 6%;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: 240px;
+    gap: 75px;
   }
 }
 
@@ -59,10 +63,10 @@
       @include o-r-s280-h280;
       display: block;
       position: absolute;
-      top: -37px;
-      right: 0;
+      top: -39px;
+      left: 113px;
       text-align: center;
-      color: $grey-9;
+      color: $grey-10;
       z-index: -1;
       counter-increment: orderedlist;
       content: counter(orderedlist);
