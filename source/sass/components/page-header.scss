@@ -42,7 +42,8 @@
   text-decoration: none;
   align-items: center;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 
@@ -53,6 +54,16 @@
 
 .page-header__logo-img {
   margin-bottom: 7px;
+
+  @include s768 {
+    width: 174px;
+    height: 52px;
+  }
+
+  @include s1300 {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .page-header__logo-lable {

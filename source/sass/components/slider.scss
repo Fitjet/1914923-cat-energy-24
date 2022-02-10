@@ -63,6 +63,7 @@
 
 .slider__toggle {
   position: relative;
+  outline: none;
 
   &::before {
     display: block;
@@ -94,6 +95,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     cursor: ew-resize;
+    border-radius: 50%;
 
     &::before {
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
@@ -112,7 +114,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
     &::before {
       border-color: $green-1;
     }

@@ -55,16 +55,16 @@
     @include a-r-s16-h20;
     width: 160px;
     text-align: right;
-
-    &--space {
-      display: block;
-      height: 19px;
-    }
   }
 
   @include s1300 {
     text-align: left;
   }
+}
+
+.contacts__space {
+  display: block;
+  height: 19px;
 }
 
 .contacts__map {

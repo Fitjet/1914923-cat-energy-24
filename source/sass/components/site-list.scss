@@ -88,7 +88,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -97,7 +98,8 @@
   }
 
   &--current:hover,
-  &--current:active {
+  &--current:active,
+  &--current:focus {
     opacity: 1;
   }
 }

@@ -37,10 +37,10 @@
 
 .watchwords__nutrition-img {
   margin-top: 14px;
-  height: 269px;
   max-width: none;
 
   @include s768 {
+    width: auto;
     height: 610px;
     position: absolute;
     right: -2px;

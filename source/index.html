@@ -16,8 +16,8 @@
       <header class="page-header page-header--nav-closed page-header--nojs wrapper">
         <a class="page-header__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo_desktop.svg" width="202" height="59">
-            <source media="(min-width: 768px)" srcset="img/logo_tablet.svg" width="174" height="52">
+            <source media="(min-width: 1300px)" srcset="img/logo_desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo_tablet.svg">
             <img class="page-header__logo-img" src="img/logo_mobile.svg" width="34" height="38" alt="Перейти на главную">
           </picture>
           <img class="page-header__logo-lable" src="img/logo_label.svg" width="101" height="18" alt="Cat energy">
@@ -50,7 +50,7 @@
             <source type="image/webp" srcset="img/index-nutrition-mobile.webp 1x, img/index-nutrition-mobile@2x.webp 2x">
 
             <source media="(min-width: 768px)" srcset="img/index-nutrition.png 1x, img/index-nutrition@2x.png 2x">
-            <img class="watchwords__nutrition-img" src="img/index-nutrition-mobile.png" srcset="img/index-nutrition-mobile@2x.png 2x" alt="Питание для котов в яркой оранжевой упаковке: 'Cat energy pro' со вкусом курицы.">
+            <img class="watchwords__nutrition-img" src="img/index-nutrition-mobile.png" srcset="img/index-nutrition-mobile@2x.png 2x" width="280" height="270" alt="Питание для котов в яркой оранжевой упаковке: 'Cat energy pro' со вкусом курицы.">
           </picture>
           <a class="watchwords__button button button--main" href="#">Подобрать программу</a>
         </div>
@@ -148,17 +148,21 @@
                   <source type="image/webp" srcset="img/before-cat-mobile.webp 1x, img/before-cat-mobile@2x.webp 2x">
 
                   <source media="(min-width: 768px)" srcset="img/before-cat-tablet.png 1x, img/before-cat-tablet@2x.png 2x">
-                  <img class="changes__image" src="img/before-cat-mobile.png" srcset="img/before-cat-mobile@2x.png 2x" alt="Каким кот Борис был раньше.">
+                  <img class="changes__image" src="img/before-cat-mobile.png" srcset="img/before-cat-mobile@2x.png 2x" width="280" height="232" alt="Каким кот Борис был раньше.">
                 </picture>
               </div>
               <div class="changes__element changes__element--after">
-                <img class="changes__image" src="img/after-cat.png" srcset="img/after-cat@2x.png 2x" alt="Каким кот Борис стал после нашего питания.">
+                <picture>
+                  <source type="image/webp" srcset="img/after-cat.webp 1x, img/after-cat@2x.webp 2x">
+
+                  <img class="changes__image" src="img/after-cat.png" srcset="img/after-cat@2x.png 2x" width="225" height="232" alt="Каким кот Борис стал после нашего питания.">
+                </picture>
               </div>
             </div>
             <div class="changes__slider slider">
               <button class="slider__button slider__button-prior" type="button">Было</button>
               <div class="slider__control" id="slider">
-                <div class="slider__toggle">
+                <div class="slider__toggle" tabindex="0">
                   <span class="visually-hidden">Слайдер</span>
                 </div>
               </div>
@@ -178,7 +182,7 @@
               <address class="contacts__address">
                 ул. Большая
                 Конюшенная, д. 19/8
-                <span class="contacts__address--space"></span>
+                <span class="contacts__space"></span>
                 Санкт-Петербург
               </address>
             </div>
@@ -192,7 +196,7 @@
 
             <source media="(min-width: 1300px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Мы на карте.">
+            <img class="contacts__map" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="362" alt="Мы на карте.">
           </picture>
         </div>
       </section>
